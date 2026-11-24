@@ -1,0 +1,706 @@
+{
+  "font": {
+    "family": "'Inter', system-ui, sans-serif",
+    "weights": [
+      400,
+      500,
+      600,
+      700,
+      800
+    ]
+  },
+  "colors": [
+    {
+      "name": "Primary (GPL indigo)",
+      "token": "--agency-accent",
+      "hex": "#404293",
+      "usage": "Primary buttons, links, active tab, selected states, focus colour"
+    },
+    {
+      "name": "Primary strong",
+      "token": "--agency-accent-strong",
+      "hex": "#323373",
+      "usage": "Hover / pressed state of primary, link hover"
+    },
+    {
+      "name": "Primary soft",
+      "token": "--agency-accent-soft",
+      "hex": "#4042931F",
+      "usage": "Selected rows, icon tiles, tinted chips"
+    },
+    {
+      "name": "Primary ring",
+      "token": null,
+      "hex": "#4042934C",
+      "usage": "Focus ring (3px), accent glow"
+    },
+    {
+      "name": "Brand dark (chat header / bill card)",
+      "token": null,
+      "hex": "#12132B",
+      "usage": "Help Chat header, dark bill summary card"
+    },
+    {
+      "name": "Brand lavender (on dark)",
+      "token": null,
+      "hex": "#C6C7E4",
+      "usage": "Icons on the dark chat/bill header"
+    },
+    {
+      "name": "Text primary",
+      "token": "--fg-1",
+      "hex": "#131C2E",
+      "usage": "Headings and primary body text"
+    },
+    {
+      "name": "Text secondary",
+      "token": "--fg-2",
+      "hex": "#232E42",
+      "usage": "Secondary body text, list values"
+    },
+    {
+      "name": "Text tertiary",
+      "token": "--fg-3",
+      "hex": "#4E5D75",
+      "usage": "Meta text, captions, helper copy, splash tagline"
+    },
+    {
+      "name": "Text muted",
+      "token": "--fg-4",
+      "hex": "#6B7A93",
+      "usage": "Placeholders, disabled, timestamps"
+    },
+    {
+      "name": "Login heading ink",
+      "token": null,
+      "hex": "#0B1D3A",
+      "usage": "\"Welcome back\" title, \"Need help signing in?\" link (55% opacity)"
+    },
+    {
+      "name": "Text on accent",
+      "token": null,
+      "hex": "#FFFFFF",
+      "usage": "Labels on filled buttons and dark panels"
+    },
+    {
+      "name": "Login muted text",
+      "token": null,
+      "hex": "#6B7280",
+      "usage": "Login subtitle, divider caption"
+    },
+    {
+      "name": "Card / sheet",
+      "token": null,
+      "hex": "#FFFFFF",
+      "usage": "Cards, sheets, header bar, inputs on focus"
+    },
+    {
+      "name": "App canvas",
+      "token": null,
+      "hex": "#EEF2F8",
+      "usage": "App background behind cards"
+    },
+    {
+      "name": "Inset / rail",
+      "token": "--surface-2",
+      "hex": "#F6F8FB",
+      "usage": "Fact tiles, inset regions, OTP boxes, code panels"
+    },
+    {
+      "name": "Faint fill",
+      "token": "--surface-4",
+      "hex": "#EEF2F7",
+      "usage": "Chips, faint fills, skeletons"
+    },
+    {
+      "name": "Search hover",
+      "token": null,
+      "hex": "#F4F8F9",
+      "usage": "Search suggestion hover, sample-bill frame"
+    },
+    {
+      "name": "Device backdrop",
+      "token": null,
+      "hex": "#E4E9F2",
+      "usage": "Grey stage behind the phone frame (prototype only)"
+    },
+    {
+      "name": "Onboarding panel",
+      "token": null,
+      "hex": "#EBEFFF",
+      "usage": "Onboarding illustration panel and tiles"
+    },
+    {
+      "name": "Dark panel (dashboard)",
+      "token": null,
+      "hex": "#08181E",
+      "usage": "Dark hero/summary panels on the dashboard"
+    },
+    {
+      "name": "Sidebar / sub-nav dark",
+      "token": null,
+      "hex": "#0E242C",
+      "usage": "Desktop sidebar sub-title bar, menu toggle"
+    },
+    {
+      "name": "Sidebar hover",
+      "token": null,
+      "hex": "#16333D",
+      "usage": "Sidebar item hover/focus background"
+    },
+    {
+      "name": "Sidebar accent",
+      "token": null,
+      "hex": "#30A9C7",
+      "usage": "Sidebar icon colour and active left border"
+    },
+    {
+      "name": "Paper bill",
+      "token": null,
+      "hex": "#FDFCF8",
+      "usage": "Sample-bill illustration paper and rules"
+    },
+    {
+      "name": "Hairline 6%",
+      "token": null,
+      "hex": "#131C2E0F",
+      "usage": "Faint dividers, sticky header bottom border"
+    },
+    {
+      "name": "Hairline 8%",
+      "token": "--surface-hairline",
+      "hex": "#131C2E14",
+      "usage": "List dividers, table rows"
+    },
+    {
+      "name": "Border 10%",
+      "token": "--surface-border",
+      "hex": "#131C2E1A",
+      "usage": "Card borders, header border (most used border)"
+    },
+    {
+      "name": "Border 12%",
+      "token": null,
+      "hex": "#131C2E1F",
+      "usage": "Input borders, OTP boxes, dividers"
+    },
+    {
+      "name": "Border 14–16%",
+      "token": null,
+      "hex": "#131C2E29",
+      "usage": "Ghost button outline, emphasised dividers"
+    },
+    {
+      "name": "Border 18–22%",
+      "token": null,
+      "hex": "#131C2E38",
+      "usage": "Dashed upload boxes, strong outlines, toggle off track"
+    },
+    {
+      "name": "Input border (solid)",
+      "token": null,
+      "hex": "#D1D5DB",
+      "usage": "Solid input/checkbox border"
+    },
+    {
+      "name": "Neutral 300",
+      "token": "--neutral-300",
+      "hex": "#B9C4D6",
+      "usage": "Search field inset border"
+    },
+    {
+      "name": "Neutral 700",
+      "token": "--neutral-700",
+      "hex": "#38445A",
+      "usage": "Bottom-navigation icon colour (labelled footer style)"
+    },
+    {
+      "name": "Success",
+      "token": "--status-success",
+      "hex": "#1F8A5B",
+      "usage": "Paid, restored, completed, confirmations"
+    },
+    {
+      "name": "Success bg",
+      "token": "--status-success-bg",
+      "hex": "#1F8A5B1F",
+      "usage": "Success chip / banner fill"
+    },
+    {
+      "name": "Warning",
+      "token": "--status-warning",
+      "hex": "#C47D12",
+      "usage": "Due soon, planned work, pending"
+    },
+    {
+      "name": "Warning bg",
+      "token": "--status-warning-bg",
+      "hex": "#C47D1224",
+      "usage": "Warning chip / banner fill"
+    },
+    {
+      "name": "Warning on dark",
+      "token": null,
+      "hex": "#F0B866",
+      "usage": "Due-date chip text on dark panels (bg rgba(196,125,18,0.20))"
+    },
+    {
+      "name": "Error",
+      "token": "--status-error",
+      "hex": "#C43D3D",
+      "usage": "Errors, overdue, required marks, unread badge"
+    },
+    {
+      "name": "Error bg",
+      "token": "--status-error-bg",
+      "hex": "#C43D3D1F",
+      "usage": "Error banner / chip fill"
+    },
+    {
+      "name": "Info",
+      "token": "--status-info",
+      "hex": "#2A6FDB",
+      "usage": "Informational notices"
+    },
+    {
+      "name": "Info bg",
+      "token": "--status-info-bg",
+      "hex": "#2A6FDB1F",
+      "usage": "Info banner fill"
+    },
+    {
+      "name": "Required mark",
+      "token": null,
+      "hex": "#DC2626",
+      "usage": "Required-field asterisk on field labels"
+    },
+    {
+      "name": "Gold (on dark)",
+      "token": null,
+      "hex": "#E8C280",
+      "usage": "Login brand label, motto line and rule"
+    },
+    {
+      "name": "Bolt yellow",
+      "token": null,
+      "hex": "#F5C84C",
+      "usage": "Lightning bolt in onboarding illustrations"
+    },
+    {
+      "name": "Mint",
+      "token": null,
+      "hex": "#9EF0C0",
+      "usage": "Onboarding illustration accents, alert waves"
+    },
+    {
+      "name": "Dot active / done",
+      "token": null,
+      "hex": "#B5C4FF",
+      "usage": "Onboarding step dots (current / completed)"
+    },
+    {
+      "name": "Dot upcoming",
+      "token": null,
+      "hex": "#DAE0FF",
+      "usage": "Onboarding step dots (upcoming)"
+    },
+    {
+      "name": "Amber (alt theme)",
+      "token": null,
+      "hex": "#B45F16",
+      "usage": "Alternative accent option / service category tint"
+    },
+    {
+      "name": "Teal (alt theme)",
+      "token": null,
+      "hex": "#0E8D8A",
+      "usage": "Alternative accent option; restored pin"
+    },
+    {
+      "name": "Pin — unplanned",
+      "token": null,
+      "hex": "#BE2A34",
+      "usage": "Unplanned outage pins and legend dot"
+    },
+    {
+      "name": "Pin — planned",
+      "token": null,
+      "hex": "#C47D12",
+      "usage": "Planned interruption pins and legend dot"
+    },
+    {
+      "name": "Pin — restored",
+      "token": null,
+      "hex": "#0E8D8A",
+      "usage": "Restored pins and legend dot"
+    },
+    {
+      "name": "Map water",
+      "token": null,
+      "hex": "#AAD3DF",
+      "usage": "Sea and rivers"
+    },
+    {
+      "name": "Map land",
+      "token": null,
+      "hex": "#F2EFE9",
+      "usage": "Land"
+    },
+    {
+      "name": "Map forest",
+      "token": null,
+      "hex": "#ADD19E",
+      "usage": "Interior forest areas"
+    },
+    {
+      "name": "Map main road",
+      "token": null,
+      "hex": "#FCD6A4",
+      "usage": "Main roads (casing #D9A865)"
+    },
+    {
+      "name": "Map border",
+      "token": null,
+      "hex": "#9E84A6",
+      "usage": "Country/region boundaries (dashed)"
+    },
+    {
+      "name": "Sheet scrim",
+      "token": null,
+      "hex": "#0C0D208C",
+      "usage": "Backdrop behind bottom sheets and modals"
+    }
+  ],
+  "typography": [
+    {
+      "role": "Display",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 36px; font-weight: 700; line-height: 1.12; letter-spacing: 0;"
+    },
+    {
+      "role": "Figure XL",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 32px; font-weight: 700; line-height: 1.0; letter-spacing: -0.02em;"
+    },
+    {
+      "role": "Figure L",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 28px; font-weight: 700; line-height: 1.0; letter-spacing: -0.02em;"
+    },
+    {
+      "role": "H1",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 28px; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em;"
+    },
+    {
+      "role": "H1 Onboarding",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 26px; font-weight: 700; line-height: 1.2; letter-spacing: 0;"
+    },
+    {
+      "role": "Figure M (quote)",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 26px; font-weight: 800; line-height: normal; letter-spacing: -0.02em;"
+    },
+    {
+      "role": "H2 (page title)",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 24px; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em;"
+    },
+    {
+      "role": "Figure S",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 22px; font-weight: 700; line-height: 1.0; letter-spacing: -0.02em;"
+    },
+    {
+      "role": "Splash wordmark",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 21px; font-weight: 800; line-height: normal; letter-spacing: -0.3px;"
+    },
+    {
+      "role": "H3",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 20px; font-weight: 700; line-height: normal; letter-spacing: -0.01em;"
+    },
+    {
+      "role": "H4",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 19px; font-weight: 700; line-height: normal; letter-spacing: -0.01em;"
+    },
+    {
+      "role": "H5",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 18px; font-weight: 700; line-height: normal; letter-spacing: -0.01em;"
+    },
+    {
+      "role": "Title L (screen title)",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 17px; font-weight: 700; line-height: normal; letter-spacing: 0;"
+    },
+    {
+      "role": "Title M (card title)",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 16px; font-weight: 700; line-height: normal; letter-spacing: -0.01em;"
+    },
+    {
+      "role": "Button L",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 16px; font-weight: 600; line-height: 1.0; letter-spacing: 0;"
+    },
+    {
+      "role": "Title S",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 15px; font-weight: 700; line-height: normal; letter-spacing: -0.01em;"
+    },
+    {
+      "role": "Button M",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 15px; font-weight: 600; line-height: 1.0; letter-spacing: 0;"
+    },
+    {
+      "role": "Onboarding body",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 15px; font-weight: 400; line-height: 1.5; letter-spacing: 0;"
+    },
+    {
+      "role": "Body L",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 14.5px; font-weight: 400; line-height: 1.6; letter-spacing: 0;"
+    },
+    {
+      "role": "Body L strong",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 14.5px; font-weight: 600; line-height: normal; letter-spacing: 0;"
+    },
+    {
+      "role": "Body M",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.55; letter-spacing: 0;"
+    },
+    {
+      "role": "Body M medium",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 500; line-height: 1.55; letter-spacing: 0;"
+    },
+    {
+      "role": "Label M",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 600; line-height: normal; letter-spacing: 0;"
+    },
+    {
+      "role": "Label M bold",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 700; line-height: normal; letter-spacing: 0;"
+    },
+    {
+      "role": "Brand label",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 800; line-height: 16.1px; letter-spacing: -0.14px;"
+    },
+    {
+      "role": "Body S",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 13.5px; font-weight: 400; line-height: 1.55; letter-spacing: 0;"
+    },
+    {
+      "role": "Label S / nav",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 13.5px; font-weight: 600; line-height: normal; letter-spacing: 0;"
+    },
+    {
+      "role": "Caption",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 13px; font-weight: 400; line-height: 1.5; letter-spacing: 0;"
+    },
+    {
+      "role": "Caption strong",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 13px; font-weight: 600; line-height: normal; letter-spacing: 0;"
+    },
+    {
+      "role": "Small",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 12.5px; font-weight: 400; line-height: 1.5; letter-spacing: 0;"
+    },
+    {
+      "role": "Small strong",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 12.5px; font-weight: 600; line-height: normal; letter-spacing: 0;"
+    },
+    {
+      "role": "Micro",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 400; line-height: 1.4; letter-spacing: 0;"
+    },
+    {
+      "role": "Field label",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 500; line-height: normal; letter-spacing: 0;"
+    },
+    {
+      "role": "Overline L",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 700; line-height: normal; letter-spacing: 0.08em; text-transform: uppercase;"
+    },
+    {
+      "role": "Account number",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 11.5px; font-weight: 700; line-height: normal; letter-spacing: 0;"
+    },
+    {
+      "role": "Overline M",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 11px; font-weight: 700; line-height: normal; letter-spacing: 0.08em; text-transform: uppercase;"
+    },
+    {
+      "role": "Tagline",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 11px; font-weight: 600; line-height: 12.65px; letter-spacing: 0;"
+    },
+    {
+      "role": "Footer note",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 11px; font-weight: 600; line-height: normal; letter-spacing: 0.3px;"
+    },
+    {
+      "role": "Overline S",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 10.5px; font-weight: 700; line-height: normal; letter-spacing: 0.1em; text-transform: uppercase;"
+    },
+    {
+      "role": "Badge",
+      "css": "font-family: 'Inter', system-ui, sans-serif; font-size: 10px; font-weight: 700; line-height: normal; letter-spacing: 0.04em; text-transform: uppercase;"
+    }
+  ],
+  "spacing_px": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    32
+  ],
+  "radius": [
+    {
+      "value": "999px",
+      "uses": 201,
+      "where": "Buttons, chips, badges, avatars, pins, toggles — also var(--radius-pill)"
+    },
+    {
+      "value": "12px",
+      "uses": 77,
+      "where": "Inputs, list cards, fact tiles"
+    },
+    {
+      "value": "14px",
+      "uses": 47,
+      "where": "Floating cards, dropdowns, notification panel"
+    },
+    {
+      "value": "10px",
+      "uses": 41,
+      "where": "Icon buttons, small cards, search suggestions"
+    },
+    {
+      "value": "clamp(16px,3vw,20px)",
+      "uses": 41,
+      "where": "Dashboard and Bills cards (responsive)"
+    },
+    {
+      "value": "11px",
+      "uses": 28,
+      "where": "OTP boxes, close buttons"
+    },
+    {
+      "value": "16px",
+      "uses": 17,
+      "where": "Dark bill card, sheets, chat bubbles"
+    },
+    {
+      "value": "20px",
+      "uses": 8,
+      "where": "Large panels — also var(--radius-xl)"
+    },
+    {
+      "value": "13px",
+      "uses": 6,
+      "where": "Request cards"
+    },
+    {
+      "value": "18px · 18px 18px 0 0",
+      "uses": 6,
+      "where": "Report/Service cards · Outage Map detail panel"
+    },
+    {
+      "value": "24px 24px 0 0 · 20px 20px 0 0",
+      "uses": 6,
+      "where": "Bottom sheets"
+    },
+    {
+      "value": "19px",
+      "uses": 4,
+      "where": "Large icon tiles"
+    },
+    {
+      "value": "9px",
+      "uses": 4,
+      "where": "Small buttons, map controls"
+    },
+    {
+      "value": "3px",
+      "uses": 4,
+      "where": "Onboarding progress dots, bars"
+    },
+    {
+      "value": "28px 28px 0 0",
+      "uses": 1,
+      "where": "Login white sheet"
+    },
+    {
+      "value": "0 0 40px 40px",
+      "uses": 1,
+      "where": "Onboarding illustration panel"
+    },
+    {
+      "value": "6px · 8px",
+      "uses": 4,
+      "where": "Logo tile, small tags"
+    },
+    {
+      "value": "50%",
+      "uses": 2,
+      "where": "Splash glow circle"
+    }
+  ],
+  "shadows": [
+    {
+      "value": "0 2px 8px rgba(19,28,46,0.06)",
+      "usage": "Default card (most used; Dashboard “shadowSm”)"
+    },
+    {
+      "value": "0 6px 18px rgba(19,28,46,0.09)",
+      "usage": "Raised card (Dashboard “shadowMd”)"
+    },
+    {
+      "value": "0 1px 3px rgba(19,28,46,0.15–0.30)",
+      "usage": "Toggle knobs, small chips"
+    },
+    {
+      "value": "0 1px 4px rgba(19,28,46,0.05)",
+      "usage": "Subtle list cards"
+    },
+    {
+      "value": "0 4px 14px rgba(19,28,46,0.10)",
+      "usage": "Floating map card, dropdowns"
+    },
+    {
+      "value": "0 12px 30px rgba(19,28,46,0.16)",
+      "usage": "Dark bill card, popovers"
+    },
+    {
+      "value": "0 16px 40px rgba(19,28,46,0.18)",
+      "usage": "Large popovers"
+    },
+    {
+      "value": "0 -8px 24px rgba(19,28,46,0.10)",
+      "usage": "Bottom bars"
+    },
+    {
+      "value": "0 -8px 30px rgba(19,28,46,0.20)",
+      "usage": "Bottom sheets"
+    },
+    {
+      "value": "0 -12px 32px rgba(19,28,46,0.22)",
+      "usage": "Tall bottom sheets"
+    },
+    {
+      "value": "0 24px 60px rgba(8,24,30,0.34)",
+      "usage": "Dashboard modals"
+    },
+    {
+      "value": "0 0 0 3px rgba(64,66,147,0.28)",
+      "usage": "Focus ring on inputs and OTP boxes"
+    },
+    {
+      "value": "var(--shadow-sm) · var(--shadow-lg)",
+      "usage": "Dashboard hover states (1 use each)"
+    }
+  ]
+}

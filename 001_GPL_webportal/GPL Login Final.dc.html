@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/colors_and_type.css">
+<link rel="stylesheet" href="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/styles.css">
+<script src="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/_ds_bundle.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .reset-otp-box:focus { outline: none; border-color: rgb(64,66,147) !important; box-shadow: 0 0 0 3px rgba(64,66,147,0.22); }
+  body { background: #ffffff; font-family: Inter, system-ui, sans-serif; }
+  a { color: #2d2e67; text-decoration: none; }
+  a:hover { color: #1d1e42; }
+  @media (max-width: 860px) {
+    .gpl-auth-shell { flex-direction: column; }
+    .gpl-auth-side { flex: none !important; min-width: 0 !important; width: 100%; padding: 28px 24px !important; }
+    .gpl-auth-side .gpl-side-watermark { display: none; }
+    .gpl-auth-main { border-left: none !important; padding: 28px 20px 32px !important; }
+  }
+  @media (max-width: 480px) {
+    .gpl-auth-side { padding: 22px 18px !important; }
+    .gpl-auth-main { padding: 24px 16px 28px !important; }
+  }
+</style>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#2d2e67"></rect><text x="50" y="62" font-family="Inter, sans-serif" font-size="30" font-weight="800" fill="#ffffff" text-anchor="middle">GPL</text></svg></template>
+</helmet>
+
+<div class="gpl-auth-shell" style="--agency-accent:#2d2e67; --agency-accent-strong:#1d1e42; --agency-accent-soft:rgba(45,46,103,0.10); --agency-accent-ring:rgba(45,46,103,0.30); --agency-tint:#2d2e67; --agency-contrast:#ffffff; min-height:100vh; display:flex; flex-wrap:nowrap; font-family:var(--font-sans);">
+
+  <div class="gpl-auth-side" style="flex:0 1 60%; min-width:320px; overflow:hidden; position:relative; background:linear-gradient(180deg, rgb(29,30,66) 0%, rgb(45,46,103) 100%); display:flex; flex-direction:column; justify-content:space-between; padding:clamp(32px,6vw,64px);">
+    <img class="gpl-side-watermark" src="uploads/coat-of-arms-watermark.png" alt="" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:80%; max-width:520px; opacity:0.5; pointer-events:none; user-select:none;">
+    <div style="position:relative; display:flex; flex-direction:column; gap:32px;">
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <span style="font-size:48px; font-weight:700; letter-spacing:-0.02em; line-height:1.12; color:#ffffff;">GPL</span>
+        <span style="font-size:17px; font-weight:400; color:rgba(255,255,255,0.72);">Guyana Power and Light</span>
+        <span style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgb(212,175,55);">One people · One nation · One destiny</span>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:24px;">
+        <div style="width:80px; height:3px; border-radius:2px; background:rgb(212,175,55);"></div>
+        <span style="font-size:clamp(19px,2.2vw,23px); font-weight:400; line-height:1.4; color:#ffffff; max-width:34ch;">Manage your GPL account and services online.</span>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:16px;">
+      <span style="flex:none; width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,0.10); display:inline-flex; align-items:center; justify-content:center; overflow:hidden;">
+        <img src="assets/gpl-logo.jpg" alt="GPL logo" style="width:100%; height:100%; object-fit:cover;">
+      </span>
+      <span style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgb(165,181,193);">Guyana Power and Light</span>
+    </div>
+  </div>
+
+  <div class="gpl-auth-main" style="flex:1 1 auto; min-width:0; overflow-y:auto; background:#ffffff; border-left:1px solid rgb(229,231,235); display:flex; flex-direction:column; justify-content:space-between; align-items:center; padding:clamp(32px,6vw,64px);">
+    <div style="width:100%; flex:1 1 auto; display:flex; flex-direction:column; justify-content:center;">
+    <a ref="{{ setDashLink }}" href="GPL Dashboard.dc.html" aria-hidden="{{ true }}" style="display:none;">Dashboard</a>
+    <div aria-hidden="{{ sigOpen }}" style="width:100%; display:flex; flex-direction:column; gap:32px; {{ loginFormHide }}">
+      <div style="display:flex; flex-direction:column; gap:24px;">
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <span style="font-size:28px; font-weight:600; letter-spacing:-0.01em; line-height:1.3; color:rgb(11,29,58);">Welcome back</span>
+          <span style="font-size:14px; font-weight:500; line-height:1.55; color:rgb(107,114,128);">Sign in to manage your GPL account and services</span>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgb(55,65,81);">Email address</span>
+            <input type="email" value="{{ eid }}" onChange="{{ onEid }}" placeholder="you@example.com" style="height:48px; border-radius:12px; background:rgb(249,250,251); box-shadow:inset 0 0 0 1px rgb(209,213,219); padding:0 16px; font-size:14px; font-weight:500; color:rgb(11,29,58); border:none; outline:none; font-family:inherit;">
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgb(55,65,81);">Password</span>
+            <div style="height:48px; border-radius:12px; background:rgb(249,250,251); box-shadow:inset 0 0 0 1px rgb(209,213,219); padding:0 16px; display:flex; align-items:center; gap:10px;">
+              <input type="{{ pwType }}" value="{{ pw }}" onChange="{{ onPw }}" placeholder="Enter your password" style="flex:1; min-width:0; font-size:14px; font-weight:500; color:rgb(11,29,58); border:none; outline:none; background:transparent; font-family:inherit;">
+              <span onClick="{{ togglePw }}" role="button" style="flex:none; cursor:pointer; color:rgb(107,114,128); display:inline-flex;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </span>
+            </div>
+          </div>
+
+          <div style="display:flex; justify-content:flex-end;">
+            <a href="#" onClick="{{ openReset }}" style="font-size:14px; font-weight:600; color:rgb(45,46,103);">Forgot your password?</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:24px;">
+        <span onClick="{{ signIn }}" style="display:block; cursor:pointer;">
+          <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.Button" size="lg" full-width="{{ true }}" icon-right="arrow-right" hint-size="100%,48px">Sign in</x-import>
+        </span>
+        <div style="display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap;">
+          <span style="font-size:14px; font-weight:500; color:rgb(107,114,128);">Don't have a MyGPL account?</span>
+          <a href="GPL Registration Final.dc.html" style="display:inline-block;">
+            <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.Button" variant="secondary" size="md" hint-size="auto,42px">Create an account</x-import>
+          </a>
+        </div>
+      </div>
+    </div>
+    <sc-if value="{{ sigOpen }}">
+    <div role="region" aria-label="Sign-in code" style="width:0; min-width:100%; display:flex; flex-direction:column; gap:28px; --agency-accent:rgb(64,66,147); --agency-accent-strong:rgb(50,52,122); --agency-accent-soft:rgba(64,66,147,0.12); --agency-accent-ring:rgba(64,66,147,0.30);">
+      <span onClick="{{ closeSig }}" role="button" style="align-self:flex-start; cursor:pointer; display:inline-flex; align-items:center; gap:6px; font-size:14px; font-weight:600; color:rgb(45,46,103);"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block;flex:none;"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>Back to sign in</span>
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <span style="font-size:28px; font-weight:600; letter-spacing:-0.01em; line-height:1.3; color:rgb(11,29,58);">{{ sigTitle }}</span>
+        <sc-if value="{{ sigSending }}">
+          <span style="font-size:14px; font-weight:500; line-height:1.55; color:rgb(107,114,128);">Sending your code by {{ sigChannelName }} to <strong style="color:rgb(11,29,58);">{{ sigDest }}</strong>…</span>
+        </sc-if>
+        <sc-if value="{{ sigCode }}">
+          <span style="font-size:14px; font-weight:500; line-height:1.55; color:rgb(107,114,128);">Enter the 6-digit code sent by {{ sigChannelName }} to <strong style="color:rgb(11,29,58);">{{ sigDest }}</strong>.</span>
+        </sc-if>
+      </div>
+
+      <sc-if value="{{ sigSending }}">
+        <div style="display:flex; align-items:center; gap:12px; padding:8px 0;">
+          <span style="width:28px; height:28px; border-radius:999px; border:3px solid rgba(64,66,147,0.2); border-top-color:rgb(64,66,147); animation:gplSigSpin 0.7s linear infinite;"></span>
+          <span style="font-size:14px; font-weight:500; color:rgb(55,65,81);">Sending code…</span>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ sigCode }}">
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            <span style="font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgb(55,65,81);">Sign-in code</span>
+            <div style="display:flex; gap:10px;">
+              <sc-for list="{{ sigDigits }}" as="d" hint-placeholder-count="6">
+                <input inputMode="numeric" maxLength="1" aria-label="Code digit" value="{{ d.value }}" onChange="{{ d.onChange }}" onKeyDown="{{ d.onKeyDown }}" onPaste="{{ d.onPaste }}" ref="{{ d.setRef }}" style="flex:1 1 0; min-width:0; height:52px; text-align:center; font-size:20px; font-weight:700; color:rgb(11,29,58); border-radius:12px; border:none; outline:none; box-shadow:inset 0 0 0 1px {{ sigBoxBorder }}; background:{{ sigBoxBg }}; font-family:inherit;">
+              </sc-for>
+            </div>
+            <sc-if value="{{ sigError }}">
+              <span style="font-size:13px; font-weight:600; color:var(--status-error);">{{ sigError }}</span>
+            </sc-if>
+          </div>
+          <div style="background:rgb(249,250,251); border:1px dashed rgba(19,28,46,0.18); border-radius:10px; padding:9px 12px; font-size:12.5px; color:rgb(55,65,81);">Prototype code: <strong style="letter-spacing:0.12em;">{{ sigDemoCode }}</strong></div>
+          <span onClick="{{ verifySig }}" style="display:block; cursor:{{ sigVerifyCursor }}; opacity:{{ sigVerifyOpacity }};">
+            <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.Button" size="lg" full-width="{{ true }}" icon-right="arrow-right" hint-size="100%,48px">Verify and sign in</x-import>
+          </span>
+          <div style="display:flex; justify-content:center; font-size:14px;">
+            <span onClick="{{ resendSig }}" role="button" style="font-weight:600; color:{{ sigResendColor }}; cursor:{{ sigResendCursor }};">{{ sigResendLabel }}</span>
+          </div>
+          <p style="font-size:12.5px; line-height:1.5; color:rgb(107,114,128); margin:0; text-align:center;">Codes are sent by {{ sigChannelName }}, as set in your account settings (Account and notifications › Sign-in and security).</p>
+        </div>
+      </sc-if>
+    </div>
+    </sc-if>
+    </div>
+    <span style="opacity:0.8; font-size:14px; font-weight:500; text-align:center; color:rgb(156,163,175);">Need help signing in? Get help</span>
+  </div>
+
+  <style>@keyframes gplSigSpin { to { transform: rotate(360deg); } }</style>
+  <sc-if value="{{ resetOpen }}">
+    <div onClick="{{ closeReset }}" style="position:fixed; inset:0; z-index:200; background:rgba(12,13,32,0.55); display:flex; align-items:center; justify-content:center; padding:clamp(12px,4vw,32px);">
+      <div onClick="{{ stopPropagation }}" style="--agency-accent:rgb(64,66,147); --agency-accent-strong:rgb(50,52,122); background:rgb(255,255,255); border-radius:24px; box-shadow:0 12px 30px rgba(19,28,46,0.2); max-width:400px; width:100%; overflow:hidden;">
+        <div style="padding:18px 22px; border:1px solid rgba(19,28,46,0.08); border-top:none; border-left:none; border-right:none; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+          <h3 style="font-size:16px; font-weight:700; letter-spacing:-0.16px; color:rgb(11,29,58); margin:0;">Reset your password</h3>
+          <span onClick="{{ closeReset }}" role="button" style="cursor:pointer; color:rgb(107,122,147); display:inline-flex;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block;flex:none;"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></span>
+        </div>
+
+        <sc-if value="{{ resetForm }}" hint-placeholder-val="{{ true }}">
+          <div style="padding:20px 22px; display:flex; flex-direction:column; gap:16px;">
+            <p style="font-size:14px; line-height:22.4px; color:rgb(35,46,66); margin:0;">Enter the email address or mobile number on your GPL account. A reset code will be sent so you can set a new password.</p>
+            <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.FieldLabel" label="Email address or mobile number" required="{{ true }}" error="{{ resetError }}" hint-size="100%,66px">
+              <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.Input" icon="mail" placeholder="you@example.gy or +592 000 0000" value="{{ resetValue }}" on-change="{{ onResetValue }}" error="{{ resetError }}" hint-size="100%,42px"></x-import>
+            </x-import>
+            <span onClick="{{ sendReset }}" style="display:block; cursor:pointer;">
+              <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.Button" size="lg" full-width="{{ true }}" icon-right="arrow-right" hint-size="100%,48px">Send reset code</x-import>
+            </span>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ resetCode }}">
+          <div style="padding:20px 22px; display:flex; flex-direction:column; gap:14px;">
+            <p style="font-size:14px; line-height:1.6; color:rgb(35,46,66); margin:0;">Enter the 6-digit code sent to <strong>{{ resetTarget }}</strong>.</p>
+            <div style="display:flex; gap:8px;">
+              <sc-for list="{{ codeDigits }}" as="d" hint-placeholder-count="6">
+                <input class="reset-otp-box" inputMode="numeric" maxLength="1" aria-label="Code digit" value="{{ d.value }}" onChange="{{ d.onChange }}" onKeyDown="{{ d.onKeyDown }}" onPaste="{{ d.onPaste }}" ref="{{ d.setRef }}" style="flex:1 1 0; min-width:0; height:48px; text-align:center; font-size:19px; font-weight:700; color:rgb(11,29,58); border-radius:10px; border:1.5px solid rgba(19,28,46,0.15); background:#fff;">
+              </sc-for>
+            </div>
+            <sc-if value="{{ resetCodeError }}">
+              <span style="font-size:13px; font-weight:600; color:var(--status-error);">{{ resetCodeError }}</span>
+            </sc-if>
+            <div style="background:var(--surface-2); border:1px dashed rgba(19,28,46,0.18); border-radius:10px; padding:9px 12px; font-size:12.5px; color:var(--fg-2);">Prototype code: <strong style="letter-spacing:0.12em;">{{ resetDemoCode }}</strong></div>
+            <span onClick="{{ verifyResetCode }}" style="display:block; cursor:pointer;">
+              <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.Button" size="lg" full-width="{{ true }}" icon-right="arrow-right" hint-size="100%,48px">Verify code</x-import>
+            </span>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ resetNewPw }}">
+          <div style="padding:20px 22px; display:flex; flex-direction:column; gap:16px;">
+            <p style="font-size:14px; line-height:1.6; color:rgb(35,46,66); margin:0;">Choose a new password for your GPL account.</p>
+            <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.FieldLabel" label="New password" required="{{ true }}" error="{{ resetPwError }}" hint-size="100%,66px">
+              <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.Input" icon="lock" type="password" placeholder="At least 8 characters" value="{{ resetPw }}" on-change="{{ onResetPw }}" error="{{ resetPwError }}" hint-size="100%,42px"></x-import>
+            </x-import>
+            <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.FieldLabel" label="Confirm new password" required="{{ true }}" error="{{ resetPwError }}" hint-size="100%,66px">
+              <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.Input" icon="lock" type="password" placeholder="Re-enter your new password" value="{{ resetPw2 }}" on-change="{{ onResetPw2 }}" error="{{ resetPwError }}" hint-size="100%,42px"></x-import>
+            </x-import>
+            <span onClick="{{ submitNewPw }}" style="display:block; cursor:pointer;">
+              <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.Button" size="lg" full-width="{{ true }}" icon-right="arrow-right" hint-size="100%,48px">Reset password</x-import>
+            </span>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ resetDone }}">
+          <div style="padding:clamp(18px,4vw,24px) clamp(18px,4vw,26px); display:flex; flex-direction:column; gap:14px;">
+            <div style="display:flex; gap:12px; align-items:flex-start;">
+              <span style="flex:none; width:38px; height:38px; border-radius:12px; background:var(--status-success-bg); color:var(--status-success); display:inline-flex; align-items:center; justify-content:center;"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:block;flex:none;"><path d="m5 12 5 5L20 7"></path></svg></span>
+              <div style="min-width:0;">
+                <div style="font-size:16px; font-weight:700; color:var(--fg-1);">Password reset</div>
+                <p style="font-size:14px; line-height:1.6; color:var(--fg-2); margin-top:4px;">Your password has been changed. Sign in with your new password.</p>
+              </div>
+            </div>
+            <span onClick="{{ closeReset }}" style="display:block; cursor:pointer;">
+              <x-import component-from-global-scope="GuyanaDesignSystem_c46a8c.Button" variant="secondary" full-width="{{ true }}" hint-size="100%,46px">Back to sign in</x-import>
+            </span>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const RESET_EMPTY = ['', '', '', '', '', ''];
+function newResetCode() {
+  let c = '';
+  for (let i = 0; i < 6; i++) c += Math.floor(Math.random() * 10);
+  return c;
+}
+
+const SIG_PREF = 'gpl.signinCode';
+const SIG_MOBILE = '+592 612 4408';
+const SIG_EMAIL = 'rennica.b@gmail.com';
+const SIG_MAX = 3;
+function sigPref() {
+  try { const p = JSON.parse(localStorage.getItem(SIG_PREF) || 'null'); if (p) return { on: p.on !== false, channel: p.channel === 'email' ? 'email' : 'sms' }; } catch (e) {}
+  return { on: true, channel: 'sms' };
+}
+function maskMobile(m) { const d = m.replace(/\D/g, ''); return '+592 ••• ' + d.slice(-4); }
+function maskEmail(e) { const [u, h] = e.split('@'); return u.charAt(0) + '•'.repeat(Math.max(2, u.length - 1)) + '@' + h; }
+
+class Component extends DCLogic {
+  state = {
+    eid: '', pw: '', pwVisible: false,
+    reset: null, resetValue: '', resetError: '',
+    resetCodeDigits: RESET_EMPTY.slice(), resetCodeValue: newResetCode(), resetCodeError: '',
+    resetPw: '', resetPw2: '', resetPwError: ''
+  };
+  resetRefs = [];
+  sigRefs = [];
+
+  componentWillUnmount() { clearInterval(this.sigTick); clearTimeout(this.sigTimer); }
+
+  signIn() {
+    const pref = sigPref();
+    if (!pref.on) { if (this.dashLink) this.dashLink.click(); return; }
+    this.sendSig(pref.channel);
+  }
+
+  sendSig(channel) {
+    const ch = channel || this.state.sigChannel || 'sms';
+    clearTimeout(this.sigTimer); clearInterval(this.sigTick);
+    this.setState({ sig: 'sending', sigChannel: ch, sigError: '' });
+    this.sigTimer = setTimeout(() => {
+      this.setState({ sig: 'code', sigDigits: RESET_EMPTY.slice(), sigCodeValue: newResetCode(), sigAttempts: 0, sigCountdown: 30, sigError: '', sigLocked: false });
+      this.sigTick = setInterval(() => this.setState(p => ({ sigCountdown: p.sigCountdown > 0 ? p.sigCountdown - 1 : 0 })), 1000);
+      setTimeout(() => { if (this.sigRefs[0]) this.sigRefs[0].focus(); }, 60);
+    }, 1000);
+  }
+
+  verifySig() {
+    const s = this.state;
+    if (s.sigLocked) return;
+    const entered = (s.sigDigits || []).join('');
+    if (entered.length < 6) { this.setState({ sigError: 'Enter all 6 digits.' }); return; }
+    if (entered === s.sigCodeValue) {
+      clearInterval(this.sigTick);
+      this.setState({ sig: null });
+      if (this.dashLink) this.dashLink.click();
+      return;
+    }
+    const attempts = (s.sigAttempts || 0) + 1;
+    const left = SIG_MAX - attempts;
+    this.setState({
+      sigAttempts: attempts, sigDigits: RESET_EMPTY.slice(), sigLocked: left <= 0,
+      sigError: left > 0 ? 'That code is not right. ' + (left === 1 ? 'One attempt left.' : left + ' attempts left.') : 'Too many attempts. Send a new code to try again.'
+    });
+    if (left > 0) setTimeout(() => { if (this.sigRefs[0]) this.sigRefs[0].focus(); }, 40);
+  }
+
+  closeSig() { clearInterval(this.sigTick); clearTimeout(this.sigTimer); this.setState({ sig: null, sigError: '' }); }
+
+
+  sendReset() {
+    const v = (this.state.resetValue || '').trim();
+    const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    const isPhone = v.replace(/\D/g, '').length >= 7;
+    if (!isEmail && !isPhone) {
+      this.setState({ resetError: 'Enter the email address or mobile number on your account.' });
+      return;
+    }
+    this.setState({ reset: 'code', resetError: '', resetCodeDigits: RESET_EMPTY.slice(), resetCodeValue: newResetCode(), resetCodeError: '' });
+    setTimeout(() => { if (this.resetRefs[0]) this.resetRefs[0].focus(); }, 60);
+  }
+
+  setResetDigit(i, v) {
+    const digits = this.state.resetCodeDigits.slice();
+    digits[i] = v;
+    this.setState({ resetCodeDigits: digits });
+  }
+
+  verifyResetCode() {
+    const entered = this.state.resetCodeDigits.join('');
+    if (entered.length < 6) {
+      this.setState({ resetCodeError: 'Enter all 6 digits.' });
+      return;
+    }
+    if (entered !== this.state.resetCodeValue) {
+      this.setState({ resetCodeError: 'That code is not right. Try again.', resetCodeDigits: RESET_EMPTY.slice() });
+      setTimeout(() => { if (this.resetRefs[0]) this.resetRefs[0].focus(); }, 40);
+      return;
+    }
+    this.setState({ reset: 'newpw', resetCodeError: '', resetPw: '', resetPw2: '', resetPwError: '' });
+  }
+
+  submitNewPw() {
+    const { resetPw, resetPw2 } = this.state;
+    if ((resetPw || '').length < 8) {
+      this.setState({ resetPwError: 'Password must be at least 8 characters.' });
+      return;
+    }
+    if (resetPw !== resetPw2) {
+      this.setState({ resetPwError: 'Passwords do not match.' });
+      return;
+    }
+    this.setState({ reset: 'done', resetPwError: '' });
+  }
+
+  renderVals() {
+    const s = this.state;
+    const codeDigits = s.resetCodeDigits.map((value, i) => ({
+      value: value,
+      setRef: (el) => { this.resetRefs[i] = el; },
+      onChange: (e) => {
+        const v = (e.target.value || '').replace(/\D/g, '').slice(-1);
+        this.setResetDigit(i, v);
+        if (v && this.resetRefs[i + 1]) this.resetRefs[i + 1].focus();
+      },
+      onKeyDown: (e) => {
+        if (e.key === 'Backspace' && !s.resetCodeDigits[i] && this.resetRefs[i - 1]) {
+          this.resetRefs[i - 1].focus();
+          this.setResetDigit(i - 1, '');
+        }
+      },
+      onPaste: (e) => {
+        const text = (e.clipboardData.getData('text') || '').replace(/\D/g, '').slice(0, 6);
+        if (!text) return;
+        e.preventDefault();
+        const next = s.resetCodeDigits.slice();
+        for (let k = 0; k < text.length && i + k < 6; k++) next[i + k] = text[k];
+        this.setState({ resetCodeDigits: next });
+        const last = Math.min(i + text.length, 5);
+        if (this.resetRefs[last]) this.resetRefs[last].focus();
+      }
+    }));
+    const sigCh = s.sigChannel === 'email' ? 'email' : 'sms';
+    const sigDigits = (s.sigDigits || RESET_EMPTY).map((value, i) => ({
+      value: value,
+      setRef: (el) => { this.sigRefs[i] = el; },
+      onChange: (e) => {
+        const v = (e.target.value || '').replace(/\D/g, '').slice(-1);
+        const next = (this.state.sigDigits || RESET_EMPTY).slice(); next[i] = v;
+        this.setState({ sigDigits: next, sigError: this.state.sigLocked ? this.state.sigError : '' });
+        if (v && this.sigRefs[i + 1]) this.sigRefs[i + 1].focus();
+      },
+      onKeyDown: (e) => {
+        const cur = this.state.sigDigits || RESET_EMPTY;
+        if (e.key === 'Backspace' && !cur[i] && this.sigRefs[i - 1]) { const next = cur.slice(); next[i - 1] = ''; this.setState({ sigDigits: next }); this.sigRefs[i - 1].focus(); }
+        if (e.key === 'ArrowLeft' && this.sigRefs[i - 1]) this.sigRefs[i - 1].focus();
+        if (e.key === 'ArrowRight' && this.sigRefs[i + 1]) this.sigRefs[i + 1].focus();
+        if (e.key === 'Enter') this.verifySig();
+      },
+      onPaste: (e) => {
+        const text = (e.clipboardData.getData('text') || '').replace(/\D/g, '').slice(0, 6);
+        if (!text) return;
+        e.preventDefault();
+        const next = (this.state.sigDigits || RESET_EMPTY).slice();
+        for (let k = 0; k < text.length && i + k < 6; k++) next[i + k] = text[k];
+        this.setState({ sigDigits: next });
+        const last = Math.min(i + text.length, 5);
+        if (this.sigRefs[last]) this.sigRefs[last].focus();
+      }
+    }));
+    const mkCh = (id, label, detail) => {
+      const on = sigCh === id;
+      return {
+        label: label, detail: detail, isSms: id === 'sms', isEmail: id === 'email', checked: on ? 'true' : 'false',
+        border: on ? 'rgb(64,66,147)' : 'rgba(19,28,46,0.14)', bg: on ? 'rgba(64,66,147,0.06)' : '#ffffff',
+        iconBg: on ? 'rgb(64,66,147)' : 'rgb(238,242,247)', iconColor: on ? '#ffffff' : 'rgb(35,46,66)',
+        ring: on ? 'rgb(64,66,147)' : 'rgba(19,28,46,0.22)', dot: on ? 'rgb(64,66,147)' : 'transparent',
+        onPick: () => this.setState({ sigChannel: id })
+      };
+    };
+    const filled = (s.sigDigits || []).join('').length === 6;
+    const canResend = s.sig === 'code' && !s.sigCountdown;
+    const sigVals = {
+      setDashLink: (el) => { this.dashLink = el; },
+      signIn: () => this.signIn(),
+      sigOpen: !!s.sig,
+      sigClosed: !s.sig,
+      loginFormHide: s.sig ? 'height:0; overflow:hidden; visibility:hidden; margin:0;' : '',
+      sigChoose: s.sig === 'choose',
+      sigSending: s.sig === 'sending',
+      sigCode: s.sig === 'code',
+      sigTitle: s.sig === 'code' ? 'Enter your sign-in code' : 'Sending your sign-in code',
+      sigChannels: [mkCh('sms', 'Text message (SMS)', maskMobile(SIG_MOBILE)), mkCh('email', 'Email', maskEmail(SIG_EMAIL))],
+      sigChannelName: sigCh === 'email' ? 'email' : 'text message',
+      sigDest: sigCh === 'email' ? maskEmail(SIG_EMAIL) : maskMobile(SIG_MOBILE),
+      sigDigits: sigDigits,
+      sigError: s.sigError || '',
+      sigBoxBorder: s.sigError ? 'rgba(196,61,61,0.55)' : 'rgb(209,213,219)',
+      sigBoxBg: s.sigError ? 'rgba(196,61,61,0.06)' : 'rgb(249,250,251)',
+      sigDemoCode: s.sigCodeValue || '',
+      sigVerifyCursor: filled && !s.sigLocked ? 'pointer' : 'not-allowed',
+      sigVerifyOpacity: filled && !s.sigLocked ? '1' : '0.55',
+      verifySig: () => this.verifySig(),
+      sendSig: () => this.sendSig(),
+      resendSig: () => { if (canResend || s.sigLocked) this.sendSig(); },
+      sigResendLabel: (canResend || s.sigLocked) ? 'Send a new code' : 'Send a new code in 0:' + String(s.sigCountdown || 0).padStart(2, '0'),
+      sigResendColor: (canResend || s.sigLocked) ? 'rgb(64,66,147)' : 'rgb(156,163,175)',
+      sigResendCursor: (canResend || s.sigLocked) ? 'pointer' : 'default',
+      switchSig: () => this.sendSig(sigCh === 'email' ? 'sms' : 'email'),
+      sigSwitchLabel: sigCh === 'email' ? 'Use text message instead' : 'Use email instead',
+      closeSig: () => this.closeSig()
+    };
+    return Object.assign(sigVals, {
+      eid: s.eid,
+      onEid: (e) => this.setState({ eid: e.target.value }),
+      pw: s.pw,
+      onPw: (e) => this.setState({ pw: e.target.value }),
+      pwType: s.pwVisible ? 'text' : 'password',
+      togglePw: () => this.setState({ pwVisible: !s.pwVisible }),
+      resetOpen: !!s.reset,
+      resetForm: s.reset === 'form',
+      resetCode: s.reset === 'code',
+      resetNewPw: s.reset === 'newpw',
+      resetDone: s.reset === 'done',
+      resetValue: s.resetValue,
+      resetError: s.resetError,
+      resetTarget: (s.resetValue || '').trim(),
+      onResetValue: (e) => this.setState({ resetValue: e.target.value, resetError: '' }),
+      openReset: (e) => { e.preventDefault(); this.setState({ reset: 'form' }); },
+      closeReset: () => this.setState({ reset: null, resetValue: '', resetError: '', resetPw: '', resetPw2: '', resetPwError: '' }),
+      sendReset: () => this.sendReset(),
+      codeDigits: codeDigits,
+      resetCodeError: s.resetCodeError,
+      resetDemoCode: s.resetCodeValue,
+      verifyResetCode: () => this.verifyResetCode(),
+      resetPw: s.resetPw,
+      resetPw2: s.resetPw2,
+      resetPwError: s.resetPwError,
+      onResetPw: (e) => this.setState({ resetPw: e.target.value, resetPwError: '' }),
+      onResetPw2: (e) => this.setState({ resetPw2: e.target.value, resetPwError: '' }),
+      submitNewPw: () => this.submitNewPw(),
+      stopPropagation: (e) => e.stopPropagation()
+    });
+  }
+}
+
+</script>
+</body>
+</html>

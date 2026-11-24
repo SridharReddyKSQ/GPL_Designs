@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="stylesheet" href="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/colors_and_type.css">
+  <link rel="stylesheet" href="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/styles.css">
+  <script src="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/_ds_bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+  <style>
+    body { margin: 0; background: {{ rootBg }}; }
+    a { color: var(--agency-accent); }
+    a:hover { color: var(--agency-accent-strong); }
+  </style>
+</helmet>
+
+<div data-agency="finance" style="min-height:{{ rootMinHeight }}; background:{{ rootBg }}; font-family: Inter, system-ui, sans-serif;">
+  <sc-if value="{{ standalone }}">
+    <div style="display:flex; align-items:center; gap:14px; padding:14px 16px; max-width:480px; margin:0 auto; background:#ffffff; border-bottom:1px solid rgba(19,28,46,0.10); flex-wrap:wrap;">
+      <a href="GPL Dashboard.dc.html" style="display:inline-flex; align-items:center; gap:7px; font-size:13.5px; font-weight:600;"><i data-lucide="arrow-left" style="width:15px;height:15px"></i> Dashboard</a>
+      <a href="GPL Bills and Payments.dc.html" style="font-size:13.5px; font-weight:600;">Bills</a>
+      <a href="GPL Consumption.dc.html" style="font-size:13.5px; font-weight:600;">Consumption</a>
+    </div>
+  </sc-if>
+  <div style="max-width:480px; margin:0 auto; padding:{{ bodyPadding }};">
+
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+      <h1 style="flex:1; min-width:0; font-size:18px; font-weight:700; letter-spacing:-0.01em; color:var(--fg-1); margin:0;">Recent bills</h1>
+      <span onClick="{{ toggleSort }}" role="button" tabIndex="{{ zero }}" aria-label="Sort bills" title="Sort bills" class="focus-ring press" style="cursor:pointer; flex:none; width:36px; height:36px; border-radius:10px; background:#ffffff; border:1px solid var(--surface-border); display:inline-flex; align-items:center; justify-content:center; color:var(--fg-2); transition:var(--tr-control);" style-hover="background:var(--agency-accent-soft); border-color:var(--agency-accent); color:var(--agency-accent);"><i data-lucide="arrow-up-down" style="width:16px;height:16px"></i></span>
+    </div>
+
+    <section style="background:#ffffff; border:1px solid rgba(19,28,46,0.10); border-radius:clamp(16px,3vw,20px); box-shadow:var(--shadow-sm); overflow:hidden;">
+      <div style="display:flex; flex-direction:column;">
+        <sc-for list="{{ rows }}" as="bill" hint-placeholder-count="6">
+          <div onClick="{{ bill.onOpen }}" role="button" tabIndex="{{ zero }}" style="cursor:pointer; display:flex; align-items:center; gap:16px; padding:16px 20px; border-top:1px solid rgba(19,28,46,0.06); transition:background 180ms cubic-bezier(0.2,0.8,0.3,1);" style-hover="background:var(--surface-2);">
+            <span style="flex:none; width:36px; height:36px; border-radius:10px; background:{{ bill.chipBg }}; display:inline-flex; align-items:center; justify-content:center; color:{{ bill.chipFg }};"><i data-lucide="file-text" style="width:18px;height:18px"></i></span>
+            <span style="flex:1 1 auto; min-width:0; display:flex; flex-direction:column; gap:3px;">
+              <span style="font-size:15.5px; font-weight:600; color:var(--fg-1);">{{ bill.month }}</span>
+              <span style="font-size:13px; color:var(--fg-3); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">Issued {{ bill.issued }} · {{ bill.amount }}</span>
+            </span>
+            <span style="flex:none; display:flex; align-items:center; gap:10px;">
+              <span style="display:inline-flex; align-items:center; padding:3px 10px; border-radius:999px; background:{{ bill.chipBg }}; color:{{ bill.chipFg }}; font-size:12px; font-weight:700; letter-spacing:0.01em;">{{ bill.status }}</span>
+              <i data-lucide="chevron-right" style="width:16px;height:16px; color:var(--fg-4);"></i>
+            </span>
+          </div>
+        </sc-for>
+        <sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}">
+          <div style="padding:32px 20px; text-align:center; font-size:14px; color:var(--fg-3);">No bills to show yet.</div>
+        </sc-if>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:820,&quot;height&quot;:700},&quot;embedded&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;bills&quot;:{&quot;editor&quot;:null,&quot;default&quot;:[],&quot;tsType&quot;:&quot;Array&lt;{month:string,issued:string,amount:string,status:string}&gt;&quot;},&quot;onBack&quot;:{&quot;editor&quot;:null,&quot;default&quot;:null,&quot;tsType&quot;:&quot;() =&gt; void&quot;},&quot;onOpenBill&quot;:{&quot;editor&quot;:null,&quot;default&quot;:null,&quot;tsType&quot;:&quot;(bill:any) =&gt; void&quot;}}">
+class Component extends DCLogic {
+  state = { sortDir: 'desc' };
+
+  hydrateIcons() {
+    let tries = 0;
+    const hydrate = () => {
+      try { if (window.lucide && window.lucide.createIcons) window.lucide.createIcons(); } catch (e) {}
+      if (++tries < 12) setTimeout(hydrate, 250);
+    };
+    hydrate();
+  }
+
+  componentDidMount() { this.hydrateIcons(); }
+  componentDidUpdate() { try { if (window.lucide) window.lucide.createIcons(); } catch (e) {} }
+
+  renderVals() {
+    const s = this.state;
+    const embedded = !!this.props.embedded;
+    const DEMO_BILLS = [
+      { month: 'August 2026', issued: '04 Aug 2026', amount: 'G$ 18,940', status: 'Due' },
+      { month: 'July 2026', issued: '04 Jul 2026', amount: 'G$ 19,559', status: 'Paid' },
+      { month: 'June 2026', issued: '04 Jun 2026', amount: 'G$ 16,204', status: 'Paid' },
+      { month: 'May 2026', issued: '05 May 2026', amount: 'G$ 15,880', status: 'Paid' },
+      { month: 'April 2026', issued: '04 Apr 2026', amount: 'G$ 17,112', status: 'Paid' },
+      { month: 'March 2026', issued: '04 Mar 2026', amount: 'G$ 14,730', status: 'Paid' }
+    ];
+    const bills = (this.props.bills && this.props.bills.length) ? this.props.bills : DEMO_BILLS;
+    const list = bills.slice();
+    if (s.sortDir === 'asc') list.reverse();
+    const rows = list.map(b => ({
+      ...b,
+      chipBg: b.status === 'Due' ? 'var(--status-warning-bg)' : 'var(--surface-2)',
+      chipFg: b.status === 'Due' ? 'var(--status-warning)' : 'var(--fg-3)',
+      onOpen: () => { if (this.props.onOpenBill) this.props.onOpenBill(b); }
+    }));
+    return {
+      zero: 0,
+      standalone: !embedded,
+      rootMinHeight: embedded ? '0' : '100vh',
+      rootBg: embedded ? 'transparent' : '#eef2f8',
+      bodyPadding: embedded ? '18px 16px 24px' : 'clamp(20px,3vw,28px) 24px 48px',
+      onBack: this.props.onBack || (() => {}),
+      toggleSort: () => this.setState(p => ({ sortDir: p.sortDir === 'asc' ? 'desc' : 'asc' })),
+      rows: rows,
+      isEmpty: rows.length === 0
+    };
+  }
+}
+</script>
+</body>
+</html>

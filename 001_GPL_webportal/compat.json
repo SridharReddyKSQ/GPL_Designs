@@ -1,0 +1,106 @@
+{
+  "v": 1,
+  "mode": "omelette",
+  "root": "project/",
+  "title": "GPL Portal_V1.3",
+  "entry": "GPL Developer Handoff Guide.dc.html",
+  "pages": [
+    {
+      "path": "GPL Developer Handoff Guide.dc.html",
+      "title": "GPL Developer Handoff Guide",
+      "kind": "page"
+    },
+    {
+      "path": "GPL Portal.html",
+      "title": "Bundled Page",
+      "kind": "plain"
+    },
+    {
+      "path": "GPL Service Requests.dc.html",
+      "title": "GPL Service Requests",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Dashboard.dc.html",
+      "title": "GPL Dashboard",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Report an Issue.dc.html",
+      "title": "GPL Report an Issue",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Login Final.dc.html",
+      "title": "GPL Login Final",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Help Chat.dc.html",
+      "title": "GPL Help Chat",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Portal Shell.dc.html",
+      "title": "GPL Portal Shell",
+      "kind": "page"
+    },
+    {
+      "path": "GPL OTP Verification.dc.html",
+      "title": "GPL OTP Verification",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Registration Final.dc.html",
+      "title": "GPL Registration Final",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Bills and Payments.dc.html",
+      "title": "GPL Bills and Payments",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Consumption.dc.html",
+      "title": "GPL Consumption",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Outage Map.html",
+      "title": "GPL — Outage map",
+      "kind": "plain"
+    },
+    {
+      "path": "GPL Outages and Faults.dc.html",
+      "title": "GPL Outages and Faults",
+      "kind": "component"
+    }
+  ],
+  "migratorVersion": "artifact-migrator (claude-design-backend a595f3769f57)",
+  "createdAt": "2026-11-02T06:12:27.629Z",
+  "source": {
+    "v": 1,
+    "app": "claude-design",
+    "url": "https://claude.ai/design/p/49d600d1-3640-4096-a397-93b633274a05",
+    "projectId": "49d600d1-3640-4096-a397-93b633274a05",
+    "exportedAt": "2026-11-02T06:12:27.629Z"
+  },
+  "report": {
+    "itemsVersion": 2,
+    "pages": {
+      "total": 4,
+      "ok": 3,
+      "partial": 1,
+      "notMigrated": 0
+    },
+    "items": [
+      {
+        "kind": "external_blocked",
+        "path": "GPL Outage Map.html",
+        "text": "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+      }
+    ],
+    "truncated": 0,
+    "truncatedLeftOut": 0
+  }
+}

@@ -1,0 +1,7 @@
+# Zip copies of the project folders (the folders themselves are tracked)
+*.zip
+# OS / editor clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*

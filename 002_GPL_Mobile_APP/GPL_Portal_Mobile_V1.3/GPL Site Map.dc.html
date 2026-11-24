@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/colors_and_type.css">
+  <link rel="stylesheet" href="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/styles.css">
+  <script src="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/_ds_bundle.js"></script>
+  <script src="./doc-page.js"></script>
+  <style>
+    doc-page:not(:defined) { visibility: hidden; }
+    a { color: #404293; }
+    a:hover { color: #323373; }
+  </style>
+</helmet>
+
+<doc-page margin="0.6in" data-agency="finance">
+
+  <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:16px; border-bottom:2px solid #131c2e; padding-bottom:16px; margin-bottom:24px;">
+    <div>
+      <p style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#404293; margin:0 0 6px;">GPL Portal — Mobile App</p>
+      <h1 style="font-size:30px; font-weight:800; letter-spacing:-0.02em; color:#131c2e; margin:0;">Complete site map</h1>
+      <p style="font-size:13px; color:#5a6478; margin:6px 0 0;">Every page, view and feature in the mobile portal, organised by navigation flow.</p>
+    </div>
+    <div style="text-align:right; font-size:11px; color:#8a92a3; white-space:nowrap;">GPL Portal_Mobile_V1.1<br>Guyana Power &amp; Light</div>
+  </div>
+
+  <!-- 1. Authentication -->
+  <h2 style="font-size:18px; font-weight:700; color:#131c2e; letter-spacing:-0.01em; margin:26px 0 10px; break-after:avoid;">1. Entry &amp; authentication</h2>
+  <div style="border:1px solid #dfe2ea; border-radius:12px; padding:16px 18px; break-inside:avoid; margin-bottom:6px;">
+    <p style="font-size:13px; font-weight:700; color:#131c2e; margin:0 0 6px;">Sign in <span style="font-weight:400; color:#8a92a3; font-size:12px;">— GPL Login Final.dc.html</span></p>
+    <ul style="margin:0 0 14px 18px; padding:0; font-size:12.5px; color:#3a4256; line-height:1.7;">
+      <li>Email / password fields, show-password toggle, "Remember me"</li>
+      <li>Forgot password → reset via email or mobile, code confirmation</li>
+      <li>Link to Create account</li>
+    </ul>
+    <p style="font-size:13px; font-weight:700; color:#131c2e; margin:0 0 6px;">Create account <span style="font-weight:400; color:#8a92a3; font-size:12px;">— GPL Registration Final.dc.html</span></p>
+    <ul style="margin:0 0 14px 18px; padding:0; font-size:12.5px; color:#3a4256; line-height:1.7;">
+      <li>Multi-step guided registration form</li>
+      <li>Account / meter lookup and identity details</li>
+    </ul>
+    <p style="font-size:13px; font-weight:700; color:#131c2e; margin:0 0 6px;">Verify your account <span style="font-weight:400; color:#8a92a3; font-size:12px;">— GPL OTP Verification.dc.html</span></p>
+    <ul style="margin:0 0 0 18px; padding:0; font-size:12.5px; color:#3a4256; line-height:1.7;">
+      <li>Choose channel: SMS or email</li>
+      <li>6-digit code entry, countdown timer, resend, too-many-attempts lockout</li>
+    </ul>
+  </div>
+
+  <!-- 2. Dashboard -->
+  <h2 style="font-size:18px; font-weight:700; color:#131c2e; letter-spacing:-0.01em; margin:26px 0 10px; break-after:avoid;">2. Dashboard <span style="font-weight:400; color:#8a92a3; font-size:12px;">— home hub, GPL Dashboard.dc.html</span></h2>
+  <div style="border:1px solid #dfe2ea; border-radius:12px; padding:16px 18px; break-inside:avoid;">
+    <ul style="margin:0; padding:0 0 0 18px; font-size:12.5px; color:#3a4256; line-height:1.8; columns:2; column-gap:28px;">
+      <li>Account-verified banner</li>
+      <li>Live outage &amp; planned-work notices</li>
+      <li>Amount due card</li>
+      <li>Monthly consumption card</li>
+      <li>Recent bills list</li>
+      <li>Recent service requests list</li>
+      <li>Recently used shortcuts (pinned)</li>
+      <li>Quick actions grid</li>
+      <li>Global search (bills, services, FAQ, records)</li>
+      <li>Notifications panel — slides in from the right</li>
+      <li>Profile card → Profile settings page</li>
+      <li>Bill card → Bills and payments</li>
+      <li>Consumption card → Consumption</li>
+    </ul>
+  </div>
+
+  <!-- 3. Bottom nav -->
+  <h2 style="font-size:18px; font-weight:700; color:#131c2e; letter-spacing:-0.01em; margin:26px 0 10px; break-after:avoid;">3. Bottom navigation</h2>
+  <div style="display:flex; gap:12px; break-inside:avoid; flex-wrap:wrap;">
+    <div style="flex:1 1 140px; border:1px solid #dfe2ea; border-radius:10px; padding:10px 14px; font-size:12.5px; font-weight:700; color:#131c2e;">Dashboard</div>
+    <div style="flex:1 1 140px; border:1px solid #dfe2ea; border-radius:10px; padding:10px 14px; font-size:12.5px; font-weight:700; color:#131c2e;">Outages &amp; faults</div>
+    <div style="flex:1 1 140px; border:1px solid #dfe2ea; border-radius:10px; padding:10px 14px; font-size:12.5px; font-weight:700; color:#131c2e;">My services</div>
+    <div style="flex:1 1 140px; border:1px solid #dfe2ea; border-radius:10px; padding:10px 14px; font-size:12.5px; font-weight:700; color:#131c2e;">Menu <span style="font-weight:400; color:#8a92a3;">(9-dot grid)</span></div>
+  </div>
+
+  <!-- 4. Outages & Faults -->
+  <h2 style="font-size:18px; font-weight:700; color:#131c2e; letter-spacing:-0.01em; margin:26px 0 10px; break-after:avoid;">4. Outages &amp; faults <span style="font-weight:400; color:#8a92a3; font-size:12px;">— GPL Outages and Faults.dc.html</span></h2>
+  <div style="border:1px solid #dfe2ea; border-radius:12px; padding:16px 18px; break-inside:avoid; margin-bottom:6px;">
+    <ul style="margin:0 0 14px 18px; padding:0; font-size:12.5px; color:#3a4256; line-height:1.7;">
+      <li>"What is happening now" — active outage cards with tap-to-open detail sheet</li>
+      <li>Your outage reports — status list</li>
+      <li>History — past outage/report log</li>
+      <li>Outage map — geographic view of affected zones, pin detail panel <span style="color:#8a92a3;">(GPL Outage Map.dc.html)</span></li>
+    </ul>
+    <p style="font-size:13px; font-weight:700; color:#131c2e; margin:0 0 6px;">↳ Report a problem <span style="font-weight:400; color:#8a92a3; font-size:12px;">— GPL Report an Issue.dc.html, embedded</span></p>
+    <ul style="margin:0; padding:0 0 0 18px; font-size:12.5px; color:#3a4256; line-height:1.7;">
+      <li>Step 1 — choose a category (with info popover on hidden categories)</li>
+      <li>Step 2 — describe the issue</li>
+      <li>Known-outage check — matches an existing report</li>
+      <li>Report linked confirmation, or Step 4 — details</li>
+      <li>Confirmation screen with reference number</li>
+      <li>Track — case status, back into "Your outage reports"</li>
+    </ul>
+  </div>
+
+  <!-- 5. My Services -->
+  <h2 style="font-size:18px; font-weight:700; color:#131c2e; letter-spacing:-0.01em; margin:26px 0 10px; break-after:avoid;">5. My services <span style="font-weight:400; color:#8a92a3; font-size:12px;">— GPL Service Requests.dc.html</span></h2>
+  <div style="border:1px solid #dfe2ea; border-radius:12px; padding:16px 18px; break-inside:avoid;">
+    <ul style="margin:0; padding:0 0 0 18px; font-size:12.5px; color:#3a4256; line-height:1.7;">
+      <li>"Which service do you need?" — service catalogue (3 families)</li>
+      <li>Service category — family drill-down with progress stepper</li>
+      <li>Guided request form — multi-step intake (new connection, billing query, meter/prepaid problem, etc.)</li>
+      <li>My requests — track open/closed cases, case reference &amp; status</li>
+      <li>FAQ — searchable help articles</li>
+    </ul>
+  </div>
+
+  <!-- 6. Menu -->
+  <h2 style="font-size:18px; font-weight:700; color:#131c2e; letter-spacing:-0.01em; margin:26px 0 10px; break-after:avoid;">6. Menu <span style="font-weight:400; color:#8a92a3; font-size:12px;">— account hub, within Dashboard</span></h2>
+  <div style="border:1px solid #dfe2ea; border-radius:12px; padding:16px 18px; break-inside:avoid;">
+    <ul style="margin:0; padding:0 0 0 18px; font-size:12.5px; color:#3a4256; line-height:1.7;">
+      <li>Bill card → Bills and payments (top-of-menu, dashboard-card style)</li>
+      <li>Consumption card → Consumption (top-of-menu, dashboard-card style)</li>
+      <li>Profile card → Profile settings page</li>
+      <li>Quick links — shortcuts list</li>
+    </ul>
+  </div>
+
+  <!-- 7. Profile settings -->
+  <h2 style="font-size:18px; font-weight:700; color:#131c2e; letter-spacing:-0.01em; margin:26px 0 10px; break-after:avoid;">7. Profile settings <span style="font-weight:400; color:#8a92a3; font-size:12px;">— within Dashboard</span></h2>
+  <div style="border:1px solid #dfe2ea; border-radius:12px; padding:16px 18px; break-inside:avoid;">
+    <ul style="margin:0; padding:0 0 0 18px; font-size:12.5px; color:#3a4256; line-height:1.7;">
+      <li>Your details — name, address, meter/account info</li>
+      <li>Notification preferences — channels, topics, quiet hours</li>
+      <li>How GPL contacts you — contact preferences</li>
+      <li>Sign-in and security — change password, change email/mobile (with code confirmation)</li>
+    </ul>
+  </div>
+
+  <!-- 8. Bills -->
+  <h2 style="font-size:18px; font-weight:700; color:#131c2e; letter-spacing:-0.01em; margin:26px 0 10px; break-after:avoid;">8. Bills &amp; payments <span style="font-weight:400; color:#8a92a3; font-size:12px;">— GPL Bills and Payments.dc.html</span></h2>
+  <div style="border:1px solid #dfe2ea; border-radius:12px; padding:16px 18px; break-inside:avoid;">
+    <ul style="margin:0; padding:0 0 0 18px; font-size:12.5px; color:#3a4256; line-height:1.7; columns:2; column-gap:28px;">
+      <li>Current bill — amount, due date, status</li>
+      <li>Payment history — card-list rows</li>
+      <li>Billing preferences</li>
+      <li>Bill prediction — next-bill estimate</li>
+      <li>Payment methods</li>
+      <li>Pay for someone else / Find an account</li>
+      <li>All payments — full ledger</li>
+      <li>Pay bill flow → Payment summary</li>
+      <li>Recent bills — full sortable list <span style="color:#8a92a3;">(GPL Recent Bills.dc.html)</span></li>
+    </ul>
+  </div>
+
+  <!-- 9. Consumption -->
+  <h2 style="font-size:18px; font-weight:700; color:#131c2e; letter-spacing:-0.01em; margin:26px 0 10px; break-after:avoid;">9. Consumption <span style="font-weight:400; color:#8a92a3; font-size:12px;">— GPL Consumption.dc.html</span></h2>
+  <div style="border:1px solid #dfe2ea; border-radius:12px; padding:16px 18px; break-inside:avoid;">
+    <ul style="margin:0; padding:0 0 0 18px; font-size:12.5px; color:#3a4256; line-height:1.7; columns:2; column-gap:28px;">
+      <li>Usage summary cards</li>
+      <li>Consumption trend chart</li>
+      <li>Consumption history — card-list rows</li>
+      <li>Consumption forecast</li>
+      <li>Meter and account info</li>
+      <li>Prepaid pending-integration notice</li>
+    </ul>
+  </div>
+
+  <!-- 10. Help & global -->
+  <h2 style="font-size:18px; font-weight:700; color:#131c2e; letter-spacing:-0.01em; margin:26px 0 10px; break-after:avoid;">10. Help &amp; global features</h2>
+  <div style="border:1px solid #dfe2ea; border-radius:12px; padding:16px 18px; break-inside:avoid;">
+    <ul style="margin:0; padding:0 0 0 18px; font-size:12.5px; color:#3a4256; line-height:1.7;">
+      <li>Help chat — floating launcher available on every screen <span style="color:#8a92a3;">(GPL Help Chat.dc.html)</span></li>
+      <li>Real navigation history — back chevron returns to the true previous page; hidden on main footer pages (Dashboard, Outages, Services, Menu), shown only on sub-pages</li>
+      <li>Bottom sheets — scrim + drag handle, no close button, auto-scaled to fit viewport</li>
+      <li>Notifications panel — full-width slide-in from the right, with scrim</li>
+      <li>Category info popover — hints for hidden report categories</li>
+    </ul>
+  </div>
+
+  <p style="font-size:11px; color:#a3a9b8; margin-top:30px; border-top:1px solid #eceef2; padding-top:12px;">GPL Portal — Mobile · Site map generated for internal reference.</p>
+
+</doc-page>
+
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/colors_and_type.css">
+<link rel="stylesheet" href="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<script src="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/_ds_bundle.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  @property --gplReveal { syntax: '<number>'; inherits: true; initial-value: 0; }
+  body { background: #ffffff; font-family: Inter, system-ui, sans-serif; }
+  a { color: #404293; text-decoration: none; }
+  a:hover { color: #2e2f6e; }
+  @keyframes gplStageIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes gplSettlePop { 0% { transform: scale(1); } 55% { transform: scale(1.045); } 100% { transform: scale(1); } }
+  @keyframes gplTextIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes gplGlowBreathe { 0%, 100% { opacity: 0.55; } 50% { opacity: 0.9; } }
+  @keyframes gplLoaderSweep { 0% { transform: translateX(-100%); } 100% { transform: translateX(240%); } }
+  @keyframes gplFlagWave { 0% { transform: translateY(0) skewY(0deg); } 28% { transform: translateY(-11px) skewY(-7deg); } 58% { transform: translateY(8px) skewY(5deg); } 82% { transform: translateY(-3px) skewY(-2deg); } 100% { transform: translateY(0) skewY(0deg); } }
+  .gpl-splash-settle { animation: gplSettlePop 550ms cubic-bezier(0.34,1.56,0.64,1) 1380ms both; }
+  .gpl-splash-glow { animation: gplStageIn 900ms ease-out 200ms both, gplGlowBreathe 2800ms ease-in-out 1500ms infinite; }
+  .gpl-splash-brand { animation: gplTextIn 560ms cubic-bezier(0.2,0.8,0.3,1) 1460ms both; }
+  .gpl-splash-tagline { animation: gplTextIn 560ms cubic-bezier(0.2,0.8,0.3,1) 1600ms both; }
+  .gpl-splash-loader { animation: gplTextIn 560ms cubic-bezier(0.2,0.8,0.3,1) 1760ms both; }
+  .gpl-splash-loader-fill { animation: gplLoaderSweep 1300ms cubic-bezier(0.4,0,0.2,1) infinite; }
+  .gpl-flag-stage { opacity: 0; animation: gplStageIn 200ms ease-out 0ms forwards; perspective: 500px; }
+  .gpl-strip { position: absolute; top: 0; width: 15px; height: 180px; background-image: url('assets/gpl-logo-splash.png'); background-size: 180px 180px; animation-name: gplFlagWave; animation-duration: 900ms; animation-timing-function: cubic-bezier(0.37,0.3,0.25,1); animation-fill-mode: both; transform-origin: center left; }
+  .gpl-strip-0 { left:0px; background-position:0 0; animation-delay:0ms; }
+  .gpl-strip-1 { left:15px; background-position:-15px 0; animation-delay:40ms; }
+  .gpl-strip-2 { left:30px; background-position:-30px 0; animation-delay:80ms; }
+  .gpl-strip-3 { left:45px; background-position:-45px 0; animation-delay:120ms; }
+  .gpl-strip-4 { left:60px; background-position:-60px 0; animation-delay:160ms; }
+  .gpl-strip-5 { left:75px; background-position:-75px 0; animation-delay:200ms; }
+  .gpl-strip-6 { left:90px; background-position:-90px 0; animation-delay:240ms; }
+  .gpl-strip-7 { left:105px; background-position:-105px 0; animation-delay:280ms; }
+  .gpl-strip-8 { left:120px; background-position:-120px 0; animation-delay:320ms; }
+  .gpl-strip-9 { left:135px; background-position:-135px 0; animation-delay:360ms; }
+  .gpl-strip-10 { left:150px; background-position:-150px 0; animation-delay:400ms; }
+  .gpl-strip-11 { left:165px; background-position:-165px 0; animation-delay:440ms; }
+  @media (prefers-reduced-motion: reduce) {
+    .gpl-strip, .gpl-splash-settle, .gpl-splash-glow, .gpl-splash-brand, .gpl-splash-tagline, .gpl-splash-loader, .gpl-flag-stage { animation: none !important; opacity: 1 !important; transform: none !important; }
+    .gpl-splash-loader-fill { animation-duration: 1300ms !important; }
+  }
+</style>
+</helmet>
+
+<div style="min-height:100vh; background:#ffffff; display:flex; flex-direction:column; align-items:center; justify-content:center; max-width:480px; margin:0 auto; position:relative; overflow:hidden; font-family:var(--font-sans);">
+
+  <div class="gpl-splash-glow" style="position:absolute; top:50%; left:50%; width:420px; height:420px; transform:translate(-50%,-50%); border-radius:50%; background:radial-gradient(circle, rgba(64,66,147,0.10) 0%, rgba(64,66,147,0) 70%); pointer-events:none;"></div>
+
+  <div style="display:flex; flex-direction:column; align-items:center; gap:28px; position:relative; z-index:1;">
+
+    <div class="gpl-splash-settle gpl-flag-stage" style="width:180px; height:180px; position:relative;">
+      <div class="gpl-strip gpl-strip-0"></div>
+      <div class="gpl-strip gpl-strip-1"></div>
+      <div class="gpl-strip gpl-strip-2"></div>
+      <div class="gpl-strip gpl-strip-3"></div>
+      <div class="gpl-strip gpl-strip-4"></div>
+      <div class="gpl-strip gpl-strip-5"></div>
+      <div class="gpl-strip gpl-strip-6"></div>
+      <div class="gpl-strip gpl-strip-7"></div>
+      <div class="gpl-strip gpl-strip-8"></div>
+      <div class="gpl-strip gpl-strip-9"></div>
+      <div class="gpl-strip gpl-strip-10"></div>
+      <div class="gpl-strip gpl-strip-11"></div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+      <div class="gpl-splash-brand" style="font-weight:800; font-size:21px; letter-spacing:-0.3px; color:rgb(19,28,46); text-align:center;">Guyana Power &amp; Light</div>
+      <div class="gpl-splash-tagline" style="font-weight:600; font-size:14px; color:rgb(78,93,117); text-align:center;">One front door to every service</div>
+    </div>
+
+    <div class="gpl-splash-loader" style="display:flex; flex-direction:column; align-items:center; gap:10px; margin-top:8px;">
+      <div style="width:120px; height:5px; border-radius:999px; background:rgba(64,66,147,0.14); overflow:hidden; position:relative;">
+        <div class="gpl-splash-loader-fill" style="position:absolute; top:0; left:0; width:40%; height:100%; border-radius:999px; background:linear-gradient(90deg, rgba(64,66,147,0) 0%, #404293 50%, rgba(64,66,147,0) 100%);"></div>
+      </div>
+      <div style="font-size:12px; font-weight:600; color:rgb(126,138,158); letter-spacing:0.2px;">Loading your account&hellip;</div>
+    </div>
+
+  </div>
+
+  <div style="position:absolute; bottom:28px; left:0; right:0; text-align:center; font-size:11px; font-weight:600; color:rgb(160,169,184); letter-spacing:0.3px;">Government of Guyana</div>
+
+</div>
+
+</x-dc>
+</body>
+</html>

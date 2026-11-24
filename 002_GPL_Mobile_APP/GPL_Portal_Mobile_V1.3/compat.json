@@ -1,0 +1,241 @@
+{
+  "v": 1,
+  "mode": "omelette",
+  "root": "project/",
+  "title": "GPL Portal_Mobile_V1.3",
+  "entry": "GPL Developer Handoff Guide.dc.html",
+  "pages": [
+    {
+      "path": "GPL Developer Handoff Guide - Standalone.html",
+      "title": "Bundled Page",
+      "kind": "plain"
+    },
+    {
+      "path": "GPL Developer Handoff Guide.dc.html",
+      "title": "GPL Developer Handoff Guide",
+      "kind": "page"
+    },
+    {
+      "path": "GPL Portal Mobile - Standalone.html",
+      "title": "Bundled Page",
+      "kind": "plain"
+    },
+    {
+      "path": "GPL Onboarding.dc.html",
+      "title": "GPL Onboarding",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Portal Mobile.dc.html",
+      "title": "GPL Portal Mobile",
+      "kind": "page"
+    },
+    {
+      "path": "GPL Splash Screen (Fade).dc.html",
+      "title": "GPL Splash Screen (Fade)",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Login Final copy.dc.html",
+      "title": "GPL Login Final copy",
+      "kind": "page"
+    },
+    {
+      "path": "Canvas.dc.html",
+      "title": "Canvas",
+      "kind": "page"
+    },
+    {
+      "path": "GPL Portal Mobile (Offline).html",
+      "title": "Bundled Page",
+      "kind": "plain"
+    },
+    {
+      "path": "GPL Splash Screen.dc.html",
+      "title": "GPL Splash Screen",
+      "kind": "page"
+    },
+    {
+      "path": "GPL Dashboard.dc.html",
+      "title": "GPL Dashboard",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Service Requests.dc.html",
+      "title": "GPL Service Requests",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Help Chat.dc.html",
+      "title": "GPL Help Chat",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Login Final.dc.html",
+      "title": "GPL Login Final",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Report an Issue.dc.html",
+      "title": "GPL Report an Issue",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Consumption.dc.html",
+      "title": "GPL Consumption",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Recent Bills.dc.html",
+      "title": "GPL Recent Bills",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Site Map.dc.html",
+      "title": "GPL Site Map",
+      "kind": "page"
+    },
+    {
+      "path": "GPL Bills and Payments.dc.html",
+      "title": "GPL Bills and Payments",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Registration Final.dc.html",
+      "title": "GPL Registration Final",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Outages and Faults.dc.html",
+      "title": "GPL Outages and Faults",
+      "kind": "component"
+    },
+    {
+      "path": "GPL Outage Map.dc.html",
+      "title": "GPL Outage Map",
+      "kind": "page"
+    },
+    {
+      "path": "GPL OTP Verification.dc.html",
+      "title": "GPL OTP Verification",
+      "kind": "component"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Outage Map.dc.html",
+      "title": "GPL Outage Map",
+      "kind": "page"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Portal Mobile (Offline).html",
+      "title": "Bundled Page",
+      "kind": "plain"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Portal Mobile.dc.html",
+      "title": "GPL Portal Mobile",
+      "kind": "page"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Site Map.dc.html",
+      "title": "GPL Site Map",
+      "kind": "page"
+    },
+    {
+      "path": "scratch/logo-test.html",
+      "title": "logo-test",
+      "kind": "plain"
+    },
+    {
+      "path": "scratch/logo-test3.html",
+      "title": "logo-test3",
+      "kind": "plain"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Bills and Payments.dc.html",
+      "title": "GPL Bills and Payments",
+      "kind": "component"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Consumption.dc.html",
+      "title": "GPL Consumption",
+      "kind": "component"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Dashboard.dc.html",
+      "title": "GPL Dashboard",
+      "kind": "component"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Help Chat.dc.html",
+      "title": "GPL Help Chat",
+      "kind": "component"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Login Final.dc.html",
+      "title": "GPL Login Final",
+      "kind": "component"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL OTP Verification.dc.html",
+      "title": "GPL OTP Verification",
+      "kind": "component"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Outages and Faults.dc.html",
+      "title": "GPL Outages and Faults",
+      "kind": "component"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Recent Bills.dc.html",
+      "title": "GPL Recent Bills",
+      "kind": "component"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Registration Final.dc.html",
+      "title": "GPL Registration Final",
+      "kind": "component"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Report an Issue.dc.html",
+      "title": "GPL Report an Issue",
+      "kind": "component"
+    },
+    {
+      "path": "design_handoff_gpl_portal/GPL Service Requests.dc.html",
+      "title": "GPL Service Requests",
+      "kind": "component"
+    }
+  ],
+  "migratorVersion": "artifact-migrator (claude-design-backend a595f3769f57)",
+  "createdAt": "2026-11-02T06:12:36.955Z",
+  "source": {
+    "v": 1,
+    "app": "claude-design",
+    "url": "https://claude.ai/design/p/f222725f-85ae-4dac-a83e-32961a036e54",
+    "projectId": "f222725f-85ae-4dac-a83e-32961a036e54",
+    "exportedAt": "2026-11-02T06:12:36.955Z"
+  },
+  "report": {
+    "itemsVersion": 2,
+    "pages": {
+      "total": 16,
+      "ok": 14,
+      "partial": 2,
+      "notMigrated": 0
+    },
+    "items": [
+      {
+        "kind": "external_blocked",
+        "path": "design_handoff_gpl_portal/GPL Outage Map.dc.html",
+        "text": "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+      },
+      {
+        "kind": "external_blocked",
+        "path": "GPL Outage Map.dc.html",
+        "text": "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+      }
+    ],
+    "truncated": 0,
+    "truncatedLeftOut": 0
+  }
+}

@@ -1,0 +1,138 @@
+/* GPL Portal Mobile — design values used in the app (generated from the handoff guide) */
+:root {
+  --gpl-font-family: 'Inter', system-ui, sans-serif;
+  --gpl-color-primary-gpl-indigo: #404293;  /* app token: --agency-accent */
+  --gpl-color-primary-strong: #323373;  /* app token: --agency-accent-strong */
+  --gpl-color-primary-soft: #4042931F;  /* app token: --agency-accent-soft */
+  --gpl-color-primary-ring: #4042934C;
+  --gpl-color-brand-dark-chat-header-bill-card: #12132B;
+  --gpl-color-brand-lavender-on-dark: #C6C7E4;
+  --gpl-color-text-primary: #131C2E;  /* app token: --fg-1 */
+  --gpl-color-text-secondary: #232E42;  /* app token: --fg-2 */
+  --gpl-color-text-tertiary: #4E5D75;  /* app token: --fg-3 */
+  --gpl-color-text-muted: #6B7A93;  /* app token: --fg-4 */
+  --gpl-color-login-heading-ink: #0B1D3A;
+  --gpl-color-text-on-accent: #FFFFFF;
+  --gpl-color-login-muted-text: #6B7280;
+  --gpl-color-card-sheet: #FFFFFF;
+  --gpl-color-app-canvas: #EEF2F8;
+  --gpl-color-inset-rail: #F6F8FB;  /* app token: --surface-2 */
+  --gpl-color-faint-fill: #EEF2F7;  /* app token: --surface-4 */
+  --gpl-color-search-hover: #F4F8F9;
+  --gpl-color-device-backdrop: #E4E9F2;
+  --gpl-color-onboarding-panel: #EBEFFF;
+  --gpl-color-dark-panel-dashboard: #08181E;
+  --gpl-color-sidebar-sub-nav-dark: #0E242C;
+  --gpl-color-sidebar-hover: #16333D;
+  --gpl-color-sidebar-accent: #30A9C7;
+  --gpl-color-paper-bill: #FDFCF8;
+  --gpl-color-hairline-6: #131C2E0F;
+  --gpl-color-hairline-8: #131C2E14;  /* app token: --surface-hairline */
+  --gpl-color-border-10: #131C2E1A;  /* app token: --surface-border */
+  --gpl-color-border-12: #131C2E1F;
+  --gpl-color-border-14-16: #131C2E29;
+  --gpl-color-border-18-22: #131C2E38;
+  --gpl-color-input-border-solid: #D1D5DB;
+  --gpl-color-neutral-300: #B9C4D6;  /* app token: --neutral-300 */
+  --gpl-color-neutral-700: #38445A;  /* app token: --neutral-700 */
+  --gpl-color-success: #1F8A5B;  /* app token: --status-success */
+  --gpl-color-success-bg: #1F8A5B1F;  /* app token: --status-success-bg */
+  --gpl-color-warning: #C47D12;  /* app token: --status-warning */
+  --gpl-color-warning-bg: #C47D1224;  /* app token: --status-warning-bg */
+  --gpl-color-warning-on-dark: #F0B866;
+  --gpl-color-error: #C43D3D;  /* app token: --status-error */
+  --gpl-color-error-bg: #C43D3D1F;  /* app token: --status-error-bg */
+  --gpl-color-info: #2A6FDB;  /* app token: --status-info */
+  --gpl-color-info-bg: #2A6FDB1F;  /* app token: --status-info-bg */
+  --gpl-color-required-mark: #DC2626;
+  --gpl-color-gold-on-dark: #E8C280;
+  --gpl-color-bolt-yellow: #F5C84C;
+  --gpl-color-mint: #9EF0C0;
+  --gpl-color-dot-active-done: #B5C4FF;
+  --gpl-color-dot-upcoming: #DAE0FF;
+  --gpl-color-amber-alt-theme: #B45F16;
+  --gpl-color-teal-alt-theme: #0E8D8A;
+  --gpl-color-pin-unplanned: #BE2A34;
+  --gpl-color-pin-planned: #C47D12;
+  --gpl-color-pin-restored: #0E8D8A;
+  --gpl-color-map-water: #AAD3DF;
+  --gpl-color-map-land: #F2EFE9;
+  --gpl-color-map-forest: #ADD19E;
+  --gpl-color-map-main-road: #FCD6A4;
+  --gpl-color-map-border: #9E84A6;
+  --gpl-color-sheet-scrim: #0C0D208C;
+  --gpl-space-2: 2px;
+  --gpl-space-3: 3px;
+  --gpl-space-4: 4px;
+  --gpl-space-5: 5px;
+  --gpl-space-6: 6px;
+  --gpl-space-7: 7px;
+  --gpl-space-8: 8px;
+  --gpl-space-9: 9px;
+  --gpl-space-10: 10px;
+  --gpl-space-11: 11px;
+  --gpl-space-12: 12px;
+  --gpl-space-13: 13px;
+  --gpl-space-14: 14px;
+  --gpl-space-15: 15px;
+  --gpl-space-16: 16px;
+  --gpl-space-18: 18px;
+  --gpl-space-20: 20px;
+  --gpl-space-22: 22px;
+  --gpl-space-24: 24px;
+  --gpl-space-26: 26px;
+  --gpl-space-28: 28px;
+  --gpl-space-32: 32px;
+  --gpl-radius-999: 999px;
+  --gpl-radius-12: 12px;
+  --gpl-radius-14: 14px;
+  --gpl-radius-10: 10px;
+  --gpl-radius-11: 11px;
+  --gpl-radius-16: 16px;
+  --gpl-radius-20: 20px;
+  --gpl-radius-13: 13px;
+  --gpl-radius-19: 19px;
+  --gpl-radius-9: 9px;
+  --gpl-radius-3: 3px;
+}
+
+.gpl-text-display { font-family: 'Inter', system-ui, sans-serif; font-size: 36px; font-weight: 700; line-height: 1.12; letter-spacing: 0; }
+.gpl-text-figure-xl { font-family: 'Inter', system-ui, sans-serif; font-size: 32px; font-weight: 700; line-height: 1.0; letter-spacing: -0.02em; }
+.gpl-text-figure-l { font-family: 'Inter', system-ui, sans-serif; font-size: 28px; font-weight: 700; line-height: 1.0; letter-spacing: -0.02em; }
+.gpl-text-h1 { font-family: 'Inter', system-ui, sans-serif; font-size: 28px; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
+.gpl-text-h1-onboarding { font-family: 'Inter', system-ui, sans-serif; font-size: 26px; font-weight: 700; line-height: 1.2; letter-spacing: 0; }
+.gpl-text-figure-m-quote { font-family: 'Inter', system-ui, sans-serif; font-size: 26px; font-weight: 800; line-height: normal; letter-spacing: -0.02em; }
+.gpl-text-h2-page-title { font-family: 'Inter', system-ui, sans-serif; font-size: 24px; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
+.gpl-text-figure-s { font-family: 'Inter', system-ui, sans-serif; font-size: 22px; font-weight: 700; line-height: 1.0; letter-spacing: -0.02em; }
+.gpl-text-splash-wordmark { font-family: 'Inter', system-ui, sans-serif; font-size: 21px; font-weight: 800; line-height: normal; letter-spacing: -0.3px; }
+.gpl-text-h3 { font-family: 'Inter', system-ui, sans-serif; font-size: 20px; font-weight: 700; line-height: normal; letter-spacing: -0.01em; }
+.gpl-text-h4 { font-family: 'Inter', system-ui, sans-serif; font-size: 19px; font-weight: 700; line-height: normal; letter-spacing: -0.01em; }
+.gpl-text-h5 { font-family: 'Inter', system-ui, sans-serif; font-size: 18px; font-weight: 700; line-height: normal; letter-spacing: -0.01em; }
+.gpl-text-title-l-screen-title { font-family: 'Inter', system-ui, sans-serif; font-size: 17px; font-weight: 700; line-height: normal; letter-spacing: 0; }
+.gpl-text-title-m-card-title { font-family: 'Inter', system-ui, sans-serif; font-size: 16px; font-weight: 700; line-height: normal; letter-spacing: -0.01em; }
+.gpl-text-button-l { font-family: 'Inter', system-ui, sans-serif; font-size: 16px; font-weight: 600; line-height: 1.0; letter-spacing: 0; }
+.gpl-text-title-s { font-family: 'Inter', system-ui, sans-serif; font-size: 15px; font-weight: 700; line-height: normal; letter-spacing: -0.01em; }
+.gpl-text-button-m { font-family: 'Inter', system-ui, sans-serif; font-size: 15px; font-weight: 600; line-height: 1.0; letter-spacing: 0; }
+.gpl-text-onboarding-body { font-family: 'Inter', system-ui, sans-serif; font-size: 15px; font-weight: 400; line-height: 1.5; letter-spacing: 0; }
+.gpl-text-body-l { font-family: 'Inter', system-ui, sans-serif; font-size: 14.5px; font-weight: 400; line-height: 1.6; letter-spacing: 0; }
+.gpl-text-body-l-strong { font-family: 'Inter', system-ui, sans-serif; font-size: 14.5px; font-weight: 600; line-height: normal; letter-spacing: 0; }
+.gpl-text-body-m { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.55; letter-spacing: 0; }
+.gpl-text-body-m-medium { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 500; line-height: 1.55; letter-spacing: 0; }
+.gpl-text-label-m { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 600; line-height: normal; letter-spacing: 0; }
+.gpl-text-label-m-bold { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 700; line-height: normal; letter-spacing: 0; }
+.gpl-text-brand-label { font-family: 'Inter', system-ui, sans-serif; font-size: 14px; font-weight: 800; line-height: 16.1px; letter-spacing: -0.14px; }
+.gpl-text-body-s { font-family: 'Inter', system-ui, sans-serif; font-size: 13.5px; font-weight: 400; line-height: 1.55; letter-spacing: 0; }
+.gpl-text-label-s-nav { font-family: 'Inter', system-ui, sans-serif; font-size: 13.5px; font-weight: 600; line-height: normal; letter-spacing: 0; }
+.gpl-text-caption { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; font-weight: 400; line-height: 1.5; letter-spacing: 0; }
+.gpl-text-caption-strong { font-family: 'Inter', system-ui, sans-serif; font-size: 13px; font-weight: 600; line-height: normal; letter-spacing: 0; }
+.gpl-text-small { font-family: 'Inter', system-ui, sans-serif; font-size: 12.5px; font-weight: 400; line-height: 1.5; letter-spacing: 0; }
+.gpl-text-small-strong { font-family: 'Inter', system-ui, sans-serif; font-size: 12.5px; font-weight: 600; line-height: normal; letter-spacing: 0; }
+.gpl-text-micro { font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 400; line-height: 1.4; letter-spacing: 0; }
+.gpl-text-field-label { font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 500; line-height: normal; letter-spacing: 0; }
+.gpl-text-overline-l { font-family: 'Inter', system-ui, sans-serif; font-size: 12px; font-weight: 700; line-height: normal; letter-spacing: 0.08em; text-transform: uppercase; }
+.gpl-text-account-number { font-family: 'Inter', system-ui, sans-serif; font-size: 11.5px; font-weight: 700; line-height: normal; letter-spacing: 0; }
+.gpl-text-overline-m { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; font-weight: 700; line-height: normal; letter-spacing: 0.08em; text-transform: uppercase; }
+.gpl-text-tagline { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; font-weight: 600; line-height: 12.65px; letter-spacing: 0; }
+.gpl-text-footer-note { font-family: 'Inter', system-ui, sans-serif; font-size: 11px; font-weight: 600; line-height: normal; letter-spacing: 0.3px; }
+.gpl-text-overline-s { font-family: 'Inter', system-ui, sans-serif; font-size: 10.5px; font-weight: 700; line-height: normal; letter-spacing: 0.1em; text-transform: uppercase; }
+.gpl-text-badge { font-family: 'Inter', system-ui, sans-serif; font-size: 10px; font-weight: 700; line-height: normal; letter-spacing: 0.04em; text-transform: uppercase; }

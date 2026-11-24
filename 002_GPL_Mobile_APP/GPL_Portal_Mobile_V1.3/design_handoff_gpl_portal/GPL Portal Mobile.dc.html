@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#e4e9f2">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#e4e9f2"></rect>
+    <rect x="450" y="120" width="300" height="560" rx="36" fill="#131c2e"></rect>
+    <rect x="466" y="150" width="268" height="500" rx="6" fill="#ffffff"></rect>
+    <circle cx="600" cy="130" r="4" fill="#4b5568"></circle>
+  </svg>
+</template>
+<x-dc>
+
+<helmet>
+<link rel="stylesheet" href="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/colors_and_type.css">
+<link rel="stylesheet" href="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.462.0/dist/umd/lucide.min.js"></script>
+<script src="_ds/guyana-design-system-c46a8c74-8f2b-4863-94a3-6f22ebb3d937/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #e4e9f2; font-family: Inter, system-ui, sans-serif; }
+  a { color: #404293; text-decoration: none; }
+  a:hover { color: #323373; }
+  .gpl-screen-fill { height: 100%; display: flex; flex-direction: column; }
+  .gpl-screen-fill > .sc-host { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+  .gpl-screen-fill > .sc-host > * { flex: 1; min-height: 0; }
+  *::-webkit-scrollbar { width: 0; height: 0; display: none; }
+  * { scrollbar-width: none; -ms-overflow-style: none; }
+</style>
+</helmet>
+
+<div ref="{{ deviceWrapRef }}" style="height:100vh; overflow:hidden; display:flex; align-items:center; justify-content:center; padding:20px;">
+  <div style="transform:scale({{ deviceScale }}); transform-origin:center center;">
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" width="{{ deviceWidth }}" height="{{ deviceHeight }}" hint-size="440px,956px">
+    <div style="height:100%; background:#eef2f8;">
+      <sc-if value="{{ isLogin }}" hint-placeholder-val="{{ true }}">
+        <dc-import name="GPL Login Final" hint-size="100%,100vh"></dc-import>
+      </sc-if>
+      <sc-if value="{{ isRegister }}">
+        <dc-import name="GPL Registration Final" hint-size="100%,100vh"></dc-import>
+      </sc-if>
+      <sc-if value="{{ isOtp }}">
+        <dc-import name="GPL OTP Verification" hint-size="100%,100%"></dc-import>
+      </sc-if>
+      <sc-if value="{{ isDashboard }}">
+        <dc-import name="GPL Dashboard" accent-primary="{{ accentPrimary }}" accent-strong="{{ accentStrong }}" footer-style="{{ footerStyle }}" notice-style="{{ noticeStyle }}" initial-active="{{ deepLink }}" hint-size="100%,100vh"></dc-import>
+      </sc-if>
+    </div>
+  </x-import>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;accentPalette&quot;: {
+    &quot;editor&quot;: &quot;color&quot;,
+    &quot;default&quot;: [&quot;#404293&quot;, &quot;#323373&quot;],
+    &quot;tsType&quot;: &quot;string[]&quot;,
+    &quot;options&quot;: [[&quot;#404293&quot;, &quot;#323373&quot;], [&quot;#0f7a52&quot;, &quot;#0b5d3f&quot;], [&quot;#0e8d8a&quot;, &quot;#0b6f6c&quot;], [&quot;#b45f16&quot;, &quot;#8f4b11&quot;]],
+    &quot;section&quot;: &quot;Theme&quot;
+  },
+  &quot;footerStyle&quot;: {
+    &quot;editor&quot;: &quot;enum&quot;,
+    &quot;default&quot;: &quot;labeled&quot;,
+    &quot;tsType&quot;: &quot;string&quot;,
+    &quot;options&quot;: [&quot;labeled&quot;, &quot;compact&quot;],
+    &quot;section&quot;: &quot;Navigation&quot;
+  },
+  &quot;noticeStyle&quot;: {
+    &quot;editor&quot;: &quot;enum&quot;,
+    &quot;default&quot;: &quot;outline&quot;,
+    &quot;tsType&quot;: &quot;string&quot;,
+    &quot;options&quot;: [&quot;outline&quot;, &quot;tinted&quot;],
+    &quot;section&quot;: &quot;Cards&quot;
+  }
+}">
+// Single-page router folded in directly (no separate Portal Shell wrapper) so
+// the mobile app can move between login, registration, OTP and the dashboard
+// without loading a separate document.
+const ROUTES = [
+  { match: 'gpl otp', screen: 'otp' },
+  // Report an Issue and Help Chat are mounted inside the dashboard, never as pages.
+  { match: 'gpl report an issue', screen: 'dashboard', active: 'outages' },
+  { match: 'gpl help chat', screen: 'dashboard' },
+  { match: 'gpl outages and faults', screen: 'dashboard', active: 'outages' },
+  { match: 'gpl service requests', screen: 'dashboard', active: 'services' },
+  { match: 'gpl bills and payments', screen: 'dashboard', active: 'bills' },
+  { match: 'gpl consumption', screen: 'dashboard', active: 'usage' },
+  { match: 'gpl recent bills', screen: 'dashboard', active: 'recentBills' },
+  { match: 'gpl dashboard', screen: 'dashboard' },
+  { match: 'gpl registration', screen: 'register' },
+  { match: 'gpl login', screen: 'login' }
+];
+
+class Component extends DCLogic {
+  state = { screen: 'login', scale: 1, deepLink: null };
+  wrapRef = React.createRef();
+
+  fitScale() {
+    const el = this.wrapRef.current;
+    if (!el) return;
+    const avail = Math.min(el.clientHeight, window.innerHeight) - 40;
+    if (avail < 100) { requestAnimationFrame(() => this.fitScale()); return; }
+    const s = Math.max(0.1, Math.min(1, avail / 956));
+    if (Math.abs(s - this.state.scale) > 0.005) this.setState({ scale: s });
+  }
+
+  componentDidMount() {
+    this.onClick = (e) => {
+      const a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a) return;
+      const href = decodeURIComponent(a.getAttribute('href') || '').toLowerCase();
+      if (!href || href.charAt(0) === '#' || href.indexOf('tel:') === 0 || href.indexOf('mailto:') === 0) return;
+      const hit = ROUTES.find(r => href.indexOf(r.match) !== -1);
+      if (!hit) return;
+      e.preventDefault();
+      e.stopPropagation();
+      window.scrollTo(0, 0);
+      this.setState({ screen: hit.screen, deepLink: hit.active || null });
+    };
+    document.addEventListener('click', this.onClick, true);
+    requestAnimationFrame(() => this.fitScale());
+    this.onResize = () => this.fitScale();
+    window.addEventListener('resize', this.onResize);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.onClick, true);
+    if (this.onResize) window.removeEventListener('resize', this.onResize);
+  }
+
+  renderVals() {
+    const s = this.state.screen;
+    const palette = this.props.accentPalette || ['#404293', '#323373'];
+    return {
+      deviceWidth: 440, deviceHeight: 956,
+      deviceWrapRef: this.wrapRef,
+      deviceScale: this.state.scale,
+      isLogin: s === 'login', isRegister: s === 'register', isOtp: s === 'otp', isDashboard: s === 'dashboard',
+      deepLink: this.state.deepLink,
+      accentPrimary: palette[0] || '#404293',
+      accentStrong: palette[1] || '#323373',
+      footerStyle: this.props.footerStyle || 'labeled',
+      noticeStyle: this.props.noticeStyle || 'outline'
+    };
+  }
+}
+
+</script>
+</body>
+</html>
